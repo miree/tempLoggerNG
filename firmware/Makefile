@@ -19,7 +19,6 @@ OBJECTS = usbdrv/usbdrv.o \
           usbdrv/usbdrvasm.o \
           usbdrv/oddebug.o \
           main.o \
-          adc.o \
           ADS1248.o \
 
 # symbolic targets:
