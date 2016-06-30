@@ -161,8 +161,8 @@ double Temp(double R)
 		double Tmin = -200, Tmax = 0;
 		while (Tmax-Tmin > 1e-8)
 		{
-			double Rmin = Rpt100(Tmin);
-			double Rmax = Rpt100(Tmax);
+			//double Rmin = Rpt100(Tmin);
+			//double Rmax = Rpt100(Tmax);
 			double Tmed = 0.5*(Tmin+Tmax);
 			double Rmed = Rpt100(Tmed);
 			if (Rmed > R) Tmax = Tmed;
@@ -469,7 +469,7 @@ int main(int argc, char **argv)
 		gettimeofday(&tv, NULL);
 		double T_start = tv.tv_sec + tv.tv_usec/1000000.;
 		
-		fprintf(f, "# starting timestamp: %d    (convert a the timestamp to human readable date with: date --date=\"@%d\"\n", tv.tv_sec, tv.tv_sec);
+		fprintf(f, "# starting timestamp: %d    (convert a the timestamp to human readable date with: date --date=\"@%d\"\n", (int)tv.tv_sec, (int)tv.tv_sec);
 		fprintf(f, "# time[s]  V(diode)  ");
 		if (resistance)
 		{
