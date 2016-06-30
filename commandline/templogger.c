@@ -289,6 +289,7 @@ void trigger_measurement(usb_dev_handle *handle)
 	int                 nBytes;	
 	//printf("trigger measurement\n");
 	nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_MEASURE  , 0, 0, (char *)buffer, sizeof(buffer), 5000);
+	fprintf(stderr,"nBytes=%d",nBytes);
 }
 
 void print_usage(char *argv0)
