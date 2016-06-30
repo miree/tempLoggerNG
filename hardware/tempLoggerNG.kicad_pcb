@@ -14,8 +14,8 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal hide)
-    (31 B.Cu signal hide)
+    (0 F.Cu signal)
+    (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -1126,7 +1126,7 @@
       (net 2 GND))
   )
 
-  (module localfootprints:USB_Mini-B (layer F.Cu) (tedit 57758477) (tstamp 56620FB3)
+  (module localfootprints:USB_Mini-B (layer F.Cu) (tedit 577589B5) (tstamp 56620FB3)
     (at 173.99 35.56 270)
     (descr "USB Mini-B 5-pin SMD connector")
     (tags "USB, Mini-B, connector")
