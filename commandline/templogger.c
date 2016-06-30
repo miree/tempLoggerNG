@@ -1,4 +1,4 @@
-/* Name: meacon.c
+/* Name: templogger.c
  * Project: adc measurement based on AVR USB driver
  * Author: Christian Starkjohann, modified by Michael Reese 2015
  * Creation Date: 2005-01-16
