@@ -28,9 +28,9 @@ USB_PUBLIC uchar usbFunctionSetup(uchar data[8])
 	usbRequest_t    *rq = (void *)data;
 	static uchar    replyBuf[8];
 
-    usbMsgPtr = replyBuf;
-    if(rq->bRequest == 1) // return results
-    {  
+	usbMsgPtr = replyBuf;
+	if(rq->bRequest == 1) // return results
+	{  
 		if (ADS_ready)
 		{
 			replyBuf[0] = R_buffer[0][0]; // most significant byte
@@ -44,9 +44,9 @@ USB_PUBLIC uchar usbFunctionSetup(uchar data[8])
 		}
 		
 		return 8;
-    }
-    if(rq->bRequest == 2) // return results
-    {  
+		}
+		if(rq->bRequest == 2) // return results
+		{  
 		if (ADS_ready)
 		{
 			replyBuf[0] = R_buffer[1][0];
@@ -60,9 +60,9 @@ USB_PUBLIC uchar usbFunctionSetup(uchar data[8])
 		}
 		
 		return 8;
-    }
-    if(rq->bRequest == 3) // return results
-    {  
+		}
+		if(rq->bRequest == 3) // return results
+		{  
 		if (ADS_ready)
 		{
 			replyBuf[0] = R_buffer[4][0];
@@ -76,9 +76,9 @@ USB_PUBLIC uchar usbFunctionSetup(uchar data[8])
 		}
 
 		return 8;
-    }
-    if(rq->bRequest == 4) // initiate measurment
-    {  
+		}
+		if(rq->bRequest == 4) // initiate measurment
+		{  
 		if (ADS_ready)
 		{
 			do_measurement = 1;
@@ -88,62 +88,75 @@ USB_PUBLIC uchar usbFunctionSetup(uchar data[8])
 			ADS_start_pulse();
 		}
 	}
-    if(rq->bRequest == 5) // read registers
-    {  
+	if(rq->bRequest == 5) // read registers 1
+	{  
 
 		if (ADS_ready)
-		{                                                // all registers (only the most interesting are send via USB):
-			replyBuf[0] = ADS_reg_read(ADS_REG_MUX0);    //ADS_REG_MUX0    
-			replyBuf[1] = ADS_reg_read(ADS_REG_MUX1);    //ADS_REG_VBIAS   
-			replyBuf[2] = ADS_reg_read(ADS_REG_VBIAS);   //ADS_REG_MUX1    
-			replyBuf[3] = ADS_reg_read(ADS_REG_SYS0);    //ADS_REG_SYS0    
-			replyBuf[4] = ADS_reg_read(ADS_REG_IDAC0);   //ADS_REG_OFC0    
-			replyBuf[5] = ADS_reg_read(ADS_REG_IDAC1);   //ADS_REG_OFC1    
-			replyBuf[6] = ADS_reg_read(ADS_REG_OFC0);    //ADS_REG_OFC2    
-			replyBuf[7] = ADS_reg_read(ADS_REG_FSC0);    //ADS_REG_FSC0    
-			                                             //ADS_REG_FSC1    
-                                                         //ADS_REG_FSC2    
-                                                         //ADS_REG_IDAC0   
-                                                         //ADS_REG_IDAC1
+		{
+		  // first half of all registers
+			replyBuf[0] = ADS_reg_read(ADS_REG_MUX0);    
+			replyBuf[1] = ADS_reg_read(ADS_REG_VBIAS);   
+			replyBuf[2] = ADS_reg_read(ADS_REG_MUX1);    
+			replyBuf[3] = ADS_reg_read(ADS_REG_SYS0);    
+			replyBuf[4] = ADS_reg_read(ADS_REG_OFC0);    
+			replyBuf[5] = ADS_reg_read(ADS_REG_OFC1);    
+			replyBuf[6] = ADS_reg_read(ADS_REG_OFC2);    
+			replyBuf[7] = ADS_reg_read(ADS_REG_FSC0);    
 		}  
 		return 8;
 	}   
-    return 0;
+	if(rq->bRequest == 6) 
+	{  
+		if (ADS_ready)
+		{                   
+		  // second half of all registers
+			replyBuf[0] = ADS_reg_read(ADS_REG_FSC1);    
+			replyBuf[1] = ADS_reg_read(ADS_REG_FSC2);    
+			replyBuf[2] = ADS_reg_read(ADS_REG_IDAC0);   
+			replyBuf[3] = ADS_reg_read(ADS_REG_IDAC1);   
+			replyBuf[4] = ADS_reg_read(ADS_REG_GPIOCFG); 
+			replyBuf[5] = ADS_reg_read(ADS_REG_GPIODIR); 
+			replyBuf[6] = ADS_reg_read(ADS_REG_GPIODAT); 
+			replyBuf[7] = 0; 
+		}  
+		return 8;
+	}   
+	return 0;
 }
 
 
 int main(void)
 {
-	uchar   i;
+		uchar   i;
 
-    wdt_enable(WDTO_1S);
-    //odDebugInit();
-    
-    ADS_init();
-    //ADS_start();
-    
+		wdt_enable(WDTO_1S);
+		//odDebugInit();
+		
+		ADS_init();
+		//ADS_start();
+		
 /* We fake an USB disconnect by pulling D+ and D- to 0 during reset. This is
  * necessary if we had a watchdog reset or brownout reset to notify the host
  * that it should re-enumerate the device. Otherwise the host's and device's
  * concept of the device-ID would be out of sync.
  */
-    usbDeviceDisconnect();  /* enforce re-enumeration, do this while interrupts are disabled! */
-    i = 0;
-    while(--i){         /* fake USB disconnect for > 500 ms */
-        wdt_reset();
-        _delay_ms(2);
-    }
-    usbDeviceConnect();
-    usbInit();
-    sei();
+		usbDeviceDisconnect();  /* enforce re-enumeration, do this while interrupts are disabled! */
+		i = 0;
+		while(--i){         /* fake USB disconnect for > 500 ms */
+				wdt_reset();
+				_delay_ms(2);
+		}
+		usbDeviceConnect();
+		usbInit();
+		sei();
 
-    for(uint32_t n = 0;; ++n) /* main event loop */
-    {    
+		for(uint32_t n = 0;; ++n) /* main event loop */
+		{    
 		if (!ADS_ready && n > 200000) 
 		{
 			ADS_ready = 1;
 			ADS_setup_enable_voltage_ref();
-			ADS_PGA_and_rate_setup(7, 3); // PGA:7 = 128, rate:3 = 40 SPS
+			ADS_PGA_and_rate_setup(7, 0); // PGA:7 = 128, rate:3 = 40 SPS
 			ADS_IEXC_setup(3); // 1=50uA, 2=100uA, 3=250uA, 4=500uA, 5=750uA, 6=1mA, 7=1.5mA
 			ADS_no_MOSFET();
 			//ADS_setup_enable_offset_measurement();
@@ -193,7 +206,7 @@ int main(void)
 					do_measurement++;
 				break;
 				case 4: // prepare for next measurement and send start pulse
-				    // prepare on-board temperature measurment
+						// prepare on-board temperature measurment
 					ADS_no_MOSFET();
 					ADS_setup_enable_diode_temp();
 					_delay_ms(1);
@@ -235,9 +248,9 @@ int main(void)
 			}
 		}
 			
-        wdt_reset();
-        usbPoll();
-    }
-    return 0;
+				wdt_reset();
+				usbPoll();
+		}
+		return 0;
 }
 

@@ -21,12 +21,13 @@
  * in firmware/usbdrv/USBID-License.txt.
  */
 
-#define PSCMD_ECHO        0
-#define PSCMD_READ_0_1    1
-#define PSCMD_READ_2_3    2
-#define PSCMD_READ_TEMP   3
-#define PSCMD_MEASURE     4
-#define PSCMD_READ_REGS   5
+#define PSCMD_ECHO              0
+#define PSCMD_READ_0_1          1
+#define PSCMD_READ_2_3          2
+#define PSCMD_READ_TEMP         3
+#define PSCMD_MEASURE           4
+#define PSCMD_READ_REGS_FIRST   5
+#define PSCMD_READ_REGS_SECOND  6
 /* These are the vendor specific SETUP commands implemented by our USB device */
 
 #define MAX_V (1250.*196./218.)
@@ -37,23 +38,23 @@ static int  usbGetStringAscii(usb_dev_handle *dev, int index, int langid, char *
 char    buffer[256];
 int     rval, i;
 
-    if((rval = usb_control_msg(dev, USB_ENDPOINT_IN, USB_REQ_GET_DESCRIPTOR, (USB_DT_STRING << 8) + index, langid, buffer, sizeof(buffer), 1000)) < 0)
-        return rval;
-    if(buffer[1] != USB_DT_STRING)
-        return 0;
-    if((unsigned char)buffer[0] < rval)
-        rval = (unsigned char)buffer[0];
-    rval /= 2;
-    /* lossy conversion to ISO Latin1 */
-    for(i=1;i<rval;i++){
-        if(i > buflen)  /* destination buffer overflow */
-            break;
-        buf[i-1] = buffer[2 * i];
-        if(buffer[2 * i + 1] != 0)  /* outside of ISO Latin1 range */
-            buf[i-1] = '?';
-    }
-    buf[i-1] = 0;
-    return i-1;
+	if((rval = usb_control_msg(dev, USB_ENDPOINT_IN, USB_REQ_GET_DESCRIPTOR, (USB_DT_STRING << 8) + index, langid, buffer, sizeof(buffer), 1000)) < 0)
+		return rval;
+	if(buffer[1] != USB_DT_STRING)
+		return 0;
+	if((unsigned char)buffer[0] < rval)
+		rval = (unsigned char)buffer[0];
+	rval /= 2;
+	/* lossy conversion to ISO Latin1 */
+	for(i=1;i<rval;i++){
+		if(i > buflen)  /* destination buffer overflow */
+			break;
+		buf[i-1] = buffer[2 * i];
+		if(buffer[2 * i + 1] != 0)  /* outside of ISO Latin1 range */
+			buf[i-1] = '?';
+	}
+	buf[i-1] = 0;
+	return i-1;
 }
 
 
@@ -74,59 +75,59 @@ usb_dev_handle      *handle = NULL;
 int                 errorCode = USB_ERROR_NOTFOUND;
 static int          didUsbInit = 0;
 
-    if(!didUsbInit){
-        didUsbInit = 1;
-        usb_init();
-    }
-    usb_find_busses();
-    usb_find_devices();
-    for(bus=usb_get_busses(); bus; bus=bus->next){
-        for(dev=bus->devices; dev; dev=dev->next){
-            if(dev->descriptor.idVendor == vendor && dev->descriptor.idProduct == product){
-                char    string[256];
-                int     len;
-                handle = usb_open(dev); /* we need to open the device in order to query strings */
-                if(!handle){
-                    errorCode = USB_ERROR_ACCESS;
-                    fprintf(stderr, "Warning: cannot open USB device: %s\n", usb_strerror());
-                    continue;
-                }
-                if(vendorName == NULL && productName == NULL){  /* name does not matter */
-                    break;
-                }
-                /* now check whether the names match: */
-                len = usbGetStringAscii(handle, dev->descriptor.iManufacturer, 0x0409, string, sizeof(string));
-                if(len < 0){
-                    errorCode = USB_ERROR_IO;
-                    fprintf(stderr, "Warning: cannot query manufacturer for device: %s\n", usb_strerror());
-                }else{
-                    errorCode = USB_ERROR_NOTFOUND;
-                    /* fprintf(stderr, "seen device from vendor ->%s<-\n", string); */
-                    if(strcmp(string, vendorName) == 0){
-                        len = usbGetStringAscii(handle, dev->descriptor.iProduct, 0x0409, string, sizeof(string));
-                        if(len < 0){
-                            errorCode = USB_ERROR_IO;
-                            fprintf(stderr, "Warning: cannot query product for device: %s\n", usb_strerror());
-                        }else{
-                            errorCode = USB_ERROR_NOTFOUND;
-                            /* fprintf(stderr, "seen product ->%s<-\n", string); */
-                            if(strcmp(string, productName) == 0)
-                                break;
-                        }
-                    }
-                }
-                usb_close(handle);
-                handle = NULL;
-            }
-        }
-        if(handle)
-            break;
-    }
-    if(handle != NULL){
-        errorCode = 0;
-        *device = handle;
-    }
-    return errorCode;
+	if(!didUsbInit){
+		didUsbInit = 1;
+		usb_init();
+	}
+	usb_find_busses();
+	usb_find_devices();
+	for(bus=usb_get_busses(); bus; bus=bus->next){
+		for(dev=bus->devices; dev; dev=dev->next){
+			if(dev->descriptor.idVendor == vendor && dev->descriptor.idProduct == product){
+				char    string[256];
+				int     len;
+				handle = usb_open(dev); /* we need to open the device in order to query strings */
+				if(!handle){
+					errorCode = USB_ERROR_ACCESS;
+					fprintf(stderr, "Warning: cannot open USB device: %s\n", usb_strerror());
+					continue;
+				}
+				if(vendorName == NULL && productName == NULL){  /* name does not matter */
+					break;
+				}
+				/* now check whether the names match: */
+				len = usbGetStringAscii(handle, dev->descriptor.iManufacturer, 0x0409, string, sizeof(string));
+				if(len < 0){
+					errorCode = USB_ERROR_IO;
+					fprintf(stderr, "Warning: cannot query manufacturer for device: %s\n", usb_strerror());
+				}else{
+					errorCode = USB_ERROR_NOTFOUND;
+					/* fprintf(stderr, "seen device from vendor ->%s<-\n", string); */
+					if(strcmp(string, vendorName) == 0){
+						len = usbGetStringAscii(handle, dev->descriptor.iProduct, 0x0409, string, sizeof(string));
+						if(len < 0){
+							errorCode = USB_ERROR_IO;
+							fprintf(stderr, "Warning: cannot query product for device: %s\n", usb_strerror());
+						}else{
+							errorCode = USB_ERROR_NOTFOUND;
+							/* fprintf(stderr, "seen product ->%s<-\n", string); */
+							if(strcmp(string, productName) == 0)
+								break;
+						}
+					}
+				}
+				usb_close(handle);
+				handle = NULL;
+			}
+		}
+		if(handle)
+			break;
+	}
+	if(handle != NULL){
+		errorCode = 0;
+		*device = handle;
+	}
+	return errorCode;
 }
 
 double Resistance(double adc)
@@ -296,6 +297,7 @@ void print_usage(char *argv0)
 {
 	printf("usage: %s [ch1] [ch2] [ch3] [ch4] [all] [options]\n", argv0);
 	printf(" options are:\n");
+	printf(" -r          : read registers\n");
 	printf(" -v          : verbose\n");
 	printf(" -q          : quiet\n");
 	printf(" -R          : write resistance instead of temperature to data file\n");
@@ -339,52 +341,95 @@ int main(int argc, char **argv)
 		return 0;
 	}
 
-    usb_init();
-    if(usbOpenDevice(&handle, USBDEV_SHARED_VENDOR, "www.obdev.at", USBDEV_SHARED_PRODUCT, "Temp-Logger") != 0){
-        fprintf(stderr, "Could not find USB device \"PowerSwitch\" with vid=0x%x pid=0x%x\n", USBDEV_SHARED_VENDOR, USBDEV_SHARED_PRODUCT);
-        exit(1);
-    }
+	usb_init();
+	if(usbOpenDevice(&handle, USBDEV_SHARED_VENDOR, "www.obdev.at", USBDEV_SHARED_PRODUCT, "Temp-Logger") != 0){
+		fprintf(stderr, "Could not find USB device \"PowerSwitch\" with vid=0x%x pid=0x%x\n", USBDEV_SHARED_VENDOR, USBDEV_SHARED_PRODUCT);
+		exit(1);
+	}
 /* We have searched all devices on all busses for our USB device above. Now
  * try to open it and perform the vendor specific control operations for the
  * function requested by the user.
  */
-    if(argc == 2 && strcmp(argv[1], "test") == 0){
-        int i, v, r;
+	if(argc == 2 && strcmp(argv[1], "test") == 0){
+		int i, v, r;
 /* The test consists of writing 1000 random numbers to the device and checking
  * the echo. This should discover systematic bit errors (e.g. in bit stuffing).
  */
-        for(i=0;i<1000;i++){
-            v = rand() & 0xffff;
-            nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ECHO, v, 0, (char *)buffer, sizeof(buffer), 5000);
-            if(nBytes < 2){
-                if(nBytes < 0)
-                    fprintf(stderr, "USB error: %s\n", usb_strerror());
-                fprintf(stderr, "only %d bytes received in iteration %d\n", nBytes, i);
-                fprintf(stderr, "value sent = 0x%x\n", v);
-                exit(1);
-            }
-            r = buffer[0] | (buffer[1] << 8);
-            if(r != v){
-                fprintf(stderr, "data error: received 0x%x instead of 0x%x in iteration %d\n", r, v, i);
-                exit(1);
-            }
-        }
-        printf("test succeeded\n");
-    }else if (argc == 2 && argv[1][0] == '-' && argv[1][1] == 'r') {
-        printf("reading registers:\n");
-        
-		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_READ_REGS, 0, 0, (char *)buffer, sizeof(buffer), 5000);
-		
-		printf("%d bytes read\n", nBytes);
-		char *reg_name[] = {"MUX0 ","MUX1 ","VBIAS","SYS0 ","IDAC0","IDAC1","OFC0 ","FSC0 "};
-		for (int i = 0; i < 8; ++i)
-			printf("%s = %02x\n", reg_name[i], buffer[i]);
+		for(i=0;i<1000;i++){
+			v = rand() & 0xffff;
+			nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ECHO, v, 0, (char *)buffer, sizeof(buffer), 5000);
+			if(nBytes < 2){
+				if(nBytes < 0)
+					fprintf(stderr, "USB error: %s\n", usb_strerror());
+				fprintf(stderr, "only %d bytes received in iteration %d\n", nBytes, i);
+				fprintf(stderr, "value sent = 0x%x\n", v);
+				exit(1);
+			}
+			r = buffer[0] | (buffer[1] << 8);
+			if(r != v){
+				fprintf(stderr, "data error: received 0x%x instead of 0x%x in iteration %d\n", r, v, i);
+				exit(1);
+			}
+		}
+		printf("test succeeded\n");
+	}
+	else if (argc == 2 && argv[1][0] == '-' && argv[1][1] == 'r') 
+	{
 
-    }else if (argc == 2 && argv[1][0] == '-' && argv[1][1] == 'm') {
-        printf("trigger measurement\n");
+		printf("reading registers:\n");
+		char *reg_name_first[]  = {"MUX0   ","VBIAS  ","MUX1   ","SYS0   ","OFC0   ","OFC1   ","OFC2   ","FSC0   "};
+		char *reg_name_second[] = {"FSC1   ","FSC2   ","IDAC0  ","IDAC1  ","GPIOCFG","GPIODIR","GPIODAT","-      "};
+
+		char *reg_bits[15][15]= {
+									{	"BCS1   ","BCS0    ","MUX_SP2 ","MUX_SP1 ","MUX_SP0  ","MUX_SN2","MUX_SN1","MUX_SN0"},
+									{	"VBIAS7 ","VBIAS6  ","VBIAS5  ","VBIAS4  ","VBIAS3   ","VBIAS2 ","VBIAS1 ","VBIAS0 "},
+									{	"CLKSTAT","VREFCON1","VREFCON0","REFSELT1","REFSELT0 ","MUXCAL2","MUXCAL1","MUXCAL0"},
+									{	"0      ","PGA2    ","PGA1    ","PGA0    ","DR3      ","DR2    ","DR1    ","DR0    "},
+									{	"OFC7   ","OFC6    ","OFC5    ","OFC4    ","OFC3     ","OFC2   ","OFC1   ","OFC0   "},
+									{	"OFC15  ","OFC14   ","OFC13   ","OFC12   ","OFC11    ","OFC10  ","OFC9   ","OFC8   "},
+									{	"OFC23  ","OFC22   ","OFC21   ","OFC20   ","OFC19    ","OFC18  ","OFC17  ","OFC16  "},
+									{	"FSC7   ","FSC6    ","FSC5    ","FSC4    ","FSC3     ","FSC2   ","FSC1   ","FSC0   "},
+									{	"FSC15  ","FSC14   ","FSC13   ","FSC12   ","FSC11    ","FSC10  ","FSC9   ","FSC8   "},
+									{	"FSC23  ","FSC22   ","FSC21   ","FSC20   ","FSC19    ","FSC18  ","FSC17  ","FSC16  "},
+									{	"ID3    ","ID2     ","ID1     ","ID0     ","DRDY/MODE","IMAG2  ","IMAG1  ","IMAG0  "},
+									{	"I1DIR3 ","I1DIR2  ","I1DIR1  ","I1DIR0  ","I2DIR3   ","I2DIR2 ","I2DIR1 ","I2DIR0 "},
+									{	"IOCFG7 ","IOCFG6  ","IOCFG5  ","IOCFG4  ","IOCFG3   ","IOCFG2 ","IOCFG1 ","IOCFG0 "},
+									{	"IODIR7 ","IODIR6  ","IODIR5  ","IODIR4  ","IODIR3   ","IODIR2 ","IODIR1 ","IODIR0 "},
+									{	"IODAT7 ","IODAT6  ","IODAT5  ","IODAT4  ","IODAT3   ","IODAT2 ","IODAT1 ","IODAT0 "}
+								};
+
+		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_READ_REGS_FIRST, 0, 0, (char *)buffer, sizeof(buffer), 5000);
+		//printf("%d bytes read\n", nBytes);
+		for (int i = 0; i < 8; ++i)
+		{
+			printf("%s = %02x\n", reg_name_first[i], buffer[i]);
+			for (int j = 0; j < 8; ++j)
+				printf("  %10s", reg_bits[i][j]);
+			printf("\n");
+			for (int j = 0; j < 8; ++j)
+				printf("     %d      ", (buffer[i] & (1<<(7-j)))>>(7-j));
+			printf("\n");
+			printf("--------------------------------------------------------------------------------------------------\n");
+		}
+		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_READ_REGS_SECOND, 0, 0, (char *)buffer, sizeof(buffer), 5000);
+		//printf("%d bytes read\n", nBytes);
+		for (int i = 0; i < 7; ++i)
+		{
+			printf("%s = %02x\n", reg_name_second[i], buffer[i]);
+			for (int j = 0; j < 8; ++j)
+				printf("  %10s", reg_bits[i+8][j]);
+			printf("\n");
+			for (int j = 0; j < 8; ++j)
+				printf("     %d      ", (buffer[i] & (1<<(7-j)))>>(7-j));
+			printf("\n");
+			printf("--------------------------------------------------------------------------------------------------\n");
+		}
+
+	}else if (argc == 2 && argv[1][0] == '-' && argv[1][1] == 'm') {
+		printf("trigger measurement\n");
 		//nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_MEASURE  , 0, 0, (char *)buffer, sizeof(buffer), 5000);
 		trigger_measurement(handle);
-    }else {
+	}else {
 		// do a measurement
 		const char* filename = "temperature.dat";
 		int i;
@@ -504,7 +549,7 @@ int main(int argc, char **argv)
 			
 		}
 
-    }
-    usb_close(handle);
-    return 0;
+	}
+	usb_close(handle);
+	return 0;
 }
