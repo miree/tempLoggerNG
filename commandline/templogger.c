@@ -343,7 +343,7 @@ int main(int argc, char **argv)
 
 	usb_init();
 	if(usbOpenDevice(&handle, USBDEV_SHARED_VENDOR, "www.obdev.at", USBDEV_SHARED_PRODUCT, "Temp-Logger") != 0){
-		fprintf(stderr, "Could not find USB device \"PowerSwitch\" with vid=0x%x pid=0x%x\n", USBDEV_SHARED_VENDOR, USBDEV_SHARED_PRODUCT);
+		fprintf(stderr, "Could not find USB device \"Temp-Logger\" with vid=0x%x pid=0x%x\n", USBDEV_SHARED_VENDOR, USBDEV_SHARED_PRODUCT);
 		exit(1);
 	}
 /* We have searched all devices on all busses for our USB device above. Now
