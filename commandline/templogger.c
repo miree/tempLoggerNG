@@ -138,11 +138,6 @@ static int          didUsbInit = 0;
 double Resistance(double adc)
 {
 	return adc/4096.; // values from hardware are already resistances ( in  units of 4096 ohms )
-	//double PGA = 8;
-	//double U = 2.048*adc/(0x7fffff)/PGA;
-	//double I = 0.000250;  // 250uA
-	//double R = U/I;	
-	//return R;
 }
 
 double Rpt100(double T) // R(T) for T < 0 deg C
@@ -178,13 +173,14 @@ double Temp(double R)
 	}
 }
 
-double R_temp_compensated(double R, int32_t V_diode, double a, double b)
+double R_temp_compensated(double R, int32_t V_diode, double a, double b, int temp_compensation)
 {
-	// double a = 104.099;
-	// double b = -0.0000133921;
-	// return R * 100.0/(a+b*V_diode);
-	double deltaR = a - b*V_diode;
-	return R - deltaR;
+	if (temp_compensation)
+	{
+		double deltaR = a - b*V_diode;
+		return R - deltaR;
+	}
+	return R;
 }
 
 void read_calibration_coefficients(usb_dev_handle *handle, double *a, double *b)
@@ -202,7 +198,7 @@ void read_calibration_coefficients(usb_dev_handle *handle, double *a, double *b)
 	*b = 1.0*(uint32_t)(buffer[4]<<24 | buffer[5]<<16 | buffer[6]<<8 | buffer[7])/0xffffffffu;
 }
 
-double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1, int ch2, int ch3, int ch4, int verbose, int resistance, double a, double b)
+double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1, int ch2, int ch3, int ch4, int verbose, int resistance, double a, double b, int temp_compensation)
 {
 	unsigned char       buffer[8];
 	int                 nBytes;
@@ -241,19 +237,14 @@ double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1,
 
 	int32_t V_diode = ((buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | (buffer[3]))/256;
 	
-
-	int32_t adc0_corr = adc0;
-	int32_t adc1_corr = adc1;
-	int32_t adc2_corr = adc2;
-	int32_t adc3_corr = adc3;
-	double R0    = Resistance(adc0_corr);      //   *100/97.915;
-	double R1    = Resistance(adc1_corr);  //   *100/97.985;
-	double R2    = Resistance(adc2_corr); //   *100/97.795;
-	double R3    = Resistance(adc3_corr); //   *100/97.650;
-	double R0_tc = R_temp_compensated(R0,V_diode,a,b);
-	double R1_tc = R_temp_compensated(R1,V_diode,a,b);
-	double R2_tc = R_temp_compensated(R2,V_diode,a,b);
-	double R3_tc = R_temp_compensated(R3,V_diode,a,b);
+	double R0    = Resistance(adc0); 
+	double R1    = Resistance(adc1); 
+	double R2    = Resistance(adc2); 
+	double R3    = Resistance(adc3); 
+	double R0_tc = R_temp_compensated(R0,V_diode,a,b,temp_compensation);
+	double R1_tc = R_temp_compensated(R1,V_diode,a,b,temp_compensation);
+	double R2_tc = R_temp_compensated(R2,V_diode,a,b,temp_compensation);
+	double R3_tc = R_temp_compensated(R3,V_diode,a,b,temp_compensation);
 	double T0    = Temp(R0_tc);
 	double T1    = Temp(R1_tc);
 	double T2    = Temp(R2_tc);
@@ -284,25 +275,26 @@ double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1,
 	
 	if (verbose)
 	{
-		printf("single_readout: time: %.2f    V_diode: %12d\n", T, V_diode);
+		printf("time: %3.2f    V_diode:%7d", T, V_diode);
 		if (verbose == 2)
 		{
-			if (ch1) printf("adc1: %12d   ", adc0_corr);
-			if (ch2) printf("adc2: %12d   ", adc1_corr);
-			if (ch3) printf("adc3: %12d   ", adc2_corr);
-			if (ch4) printf("adc4: %12d   ", adc3_corr);
 			printf("\n");
-			if (ch1) printf("  R1: %12.3f   ", R0_tc);
-			if (ch2) printf("  R2: %12.3f   ", R1_tc);
-			if (ch3) printf("  R3: %12.3f   ", R2_tc);
-			if (ch4) printf("  R4: %12.3f   ", R3_tc);
+			if (ch1) printf("adc1: %7d   ", adc0);
+			if (ch2) printf("adc2: %7d   ", adc1);
+			if (ch3) printf("adc3: %7d   ", adc2);
+			if (ch4) printf("adc4: %7d   ", adc3);
+			printf("\n");
+			if (ch1) printf("  R1: %7.3f   ", R0_tc);
+			if (ch2) printf("  R2: %7.3f   ", R1_tc);
+			if (ch3) printf("  R3: %7.3f   ", R2_tc);
+			if (ch4) printf("  R4: %7.3f   ", R3_tc);
 			printf("\n");
 		}
-		if (ch1) printf("  T1: %12.3f   ", T0);
-		if (ch2) printf("  T2: %12.3f   ", T1);
-		if (ch3) printf("  T3: %12.3f   ", T2);
-		if (ch4) printf("  T4: %12.3f   ", T3);
-		printf("\n\n");	
+		if (ch1) printf("  T1: %7.3f   ", T0);
+		if (ch2) printf("  T2: %7.3f   ", T1);
+		if (ch3) printf("  T3: %7.3f   ", T2);
+		if (ch4) printf("  T4: %7.3f   ", T3);
+		printf("\n");	
 	}
 	fflush(f);
 	return T; // returns time after start of measurement
@@ -320,28 +312,34 @@ void trigger_measurement(usb_dev_handle *handle)
 void print_usage(char *argv0)
 {
 	printf("usage: %s [ch1] [ch2] [ch3] [ch4] [all] [options]\n", argv0);
-	printf(" options are:\n");
-	printf(" -r          : read registers\n");
+	printf("options are:\n");
+	printf(" \n");
 	printf(" -v          : verbose\n");
 	printf(" -q          : quiet\n");
-	printf(" -R          : write resistance instead of temperature to data file\n");
 	printf(" -o filename : name of data file. default is \"temperature.dat\"\n");
 	printf(" -N n        : stop measurement after n samples\n");
 	printf(" -t t        : stop measurement after t seconds\n");
-	printf(" -d delta    : take a sample every delta seconds. Default is 0.25; min is 0.25\n");
+	printf(" -d delta    : take a sample every delta seconds. Default is 0.5 , min is 0.125\n");
+	printf(" -r          : read registers (for debugging purposes)\n");
 	printf(" -h          : output this help\n");
+	printf(" \n");
+	printf("calibration procedure:\n");
+	printf(" -R          : write resistance instead of temperature to data file\n");
+	printf(" -x          : no compensation for device temperature. Useful for calibration\n");
+	printf(" -c a b      : apply calibration coefficients for temperature compensation to the device\n");
+	printf("               R_comp = a - b * V_diode\n");
+	printf("               R = R_measured - R_comp\n");
+	printf("               a and b can be measured by switching temperature compensation\n");
+	printf("               off (using -x switch) and correlating measured resitance of a fixed value resistor\n");
+	printf("               e.g. with 100 ohms (using -R switch) with the on-chip diode junction voltage V_diode.\n");
+	printf("               Then heat up the device (not the resistor) and take data while it cools down.\n");
+	printf("               Plot \"V_diode\" vs. \"R_measured - 100 ohms\" and fit a line to determine a and b\n");
+	printf("               Finally write coefficients a and b into the device (using switch -c a b)\n");
 }
 
 int main(int argc, char **argv)
 {
-	// test Pt100 below 0 (Celsisus) numeric inversion
-	//for (int i = -200; i < 1000; ++i)
-	//{
-	//	printf("%d %f %f \n",i,Temp(i),Rpt100(Temp(i)));
-	//}
-	//return 0;
-	
-	
+
 	usb_dev_handle      *handle = NULL;
 	unsigned char       buffer[8];
 	int                 nBytes;
@@ -353,7 +351,7 @@ int main(int argc, char **argv)
 	
 	int Tmax = 0;
 	int Nmax = 0;
-	float delta_t = 0.25;
+	float delta_t = 0.5;
 	
 	int resistance = 0; // if set to 1, resistance is written to file instead of temperature
 	
@@ -366,23 +364,27 @@ int main(int argc, char **argv)
 	}
 
 	usb_init();
-	if(usbOpenDevice(&handle, USBDEV_SHARED_VENDOR, "www.obdev.at", USBDEV_SHARED_PRODUCT, "Temp-Logger") != 0){
+	if(usbOpenDevice(&handle, USBDEV_SHARED_VENDOR, "www.obdev.at", USBDEV_SHARED_PRODUCT, "Temp-Logger") != 0)
+	{
 		fprintf(stderr, "Could not find USB device \"Temp-Logger\" with vid=0x%x pid=0x%x\n", USBDEV_SHARED_VENDOR, USBDEV_SHARED_PRODUCT);
 		exit(1);
 	}
-/* We have searched all devices on all busses for our USB device above. Now
- * try to open it and perform the vendor specific control operations for the
- * function requested by the user.
- */
-	if(argc == 2 && strcmp(argv[1], "test") == 0){
+	// We have searched all devices on all busses for our USB device above. Now
+	// try to open it and perform the vendor specific control operations for the
+	// function requested by the user.
+	// 
+	if(argc == 2 && strcmp(argv[1], "test") == 0)
+	{
 		int i, v, r;
-/* The test consists of writing 1000 random numbers to the device and checking
- * the echo. This should discover systematic bit errors (e.g. in bit stuffing).
- */
-		for(i=0;i<1000;i++){
+		// The test consists of writing 1000 random numbers to the device and checking
+		// the echo. This should discover systematic bit errors (e.g. in bit stuffing).
+		// 
+		for(i=0;i<1000;i++)
+		{
 			v = rand() & 0xffff;
 			nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ECHO, v, 0, (char *)buffer, sizeof(buffer), 5000);
-			if(nBytes < 2){
+			if(nBytes < 2)
+			{
 				if(nBytes < 0)
 					fprintf(stderr, "USB error: %s\n", usb_strerror());
 				fprintf(stderr, "only %d bytes received in iteration %d\n", nBytes, i);
@@ -390,7 +392,8 @@ int main(int argc, char **argv)
 				exit(1);
 			}
 			r = buffer[0] | (buffer[1] << 8);
-			if(r != v){
+			if(r != v)
+			{
 				fprintf(stderr, "data error: received 0x%x instead of 0x%x in iteration %d\n", r, v, i);
 				exit(1);
 			}
@@ -410,7 +413,8 @@ int main(int argc, char **argv)
 		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_WRITE_CALIB_COEFFa2,      a &0xffff, 0, (char *)buffer, sizeof(buffer), 5000);		
 		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_WRITE_CALIB_COEFFb1, (b>>16)&0xffff, 0, (char *)buffer, sizeof(buffer), 5000);		
 		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_WRITE_CALIB_COEFFb2,      b &0xffff, 0, (char *)buffer, sizeof(buffer), 5000);		
-		if(nBytes < 2){
+		if(nBytes < 2)
+		{
 			if(nBytes < 0)
 				fprintf(stderr, "USB error: %s\n", usb_strerror());
 			exit(1);
@@ -476,13 +480,16 @@ int main(int argc, char **argv)
 		trigger_measurement(handle);
 	}else {
 		double a,b;
-		read_calibration_coefficients(handle, &a, &b);
-		printf("calib: %lf - %lf\n", a, b);
+		int temp_compensation = 1; // true
 		// do a measurement
 		const char* filename = "temperature.dat";
 		int i;
 		for (i = 1; i < argc; ++i)
 		{
+			if (strcmp(argv[i], "-x") == 0)
+			{
+				temp_compensation = 0; // false
+			}			
 			if (strcmp(argv[i], "-o") == 0)
 			{
 				++i;
@@ -525,10 +532,10 @@ int main(int argc, char **argv)
 					return 1;
 				}
 				sscanf(argv[i],"%f", &delta_t);
-				if (delta_t < 0.15) 
+				if (delta_t < 0.12) 
 				{
 					printf("delta_t too small, changing it to 0.15 sec\n");
-					delta_t = 0.15;
+					delta_t = 0.12;
 				}
 				printf("taking one sample per %f seconds\n", delta_t);
 			}			
@@ -546,6 +553,16 @@ int main(int argc, char **argv)
 				return 0;
 			}
 		}
+
+		if (temp_compensation)
+		{
+			read_calibration_coefficients(handle, &a, &b);
+			if (verbose >= 1)
+			{
+				printf("calibration coefficients for temp. compensation: a=%lf  b=%lf   (deltaR = a - b*V_diode)\n", a, b);
+			}
+		}
+
 		
 		if ((ch1 || ch2 || ch3 || ch4)   == 0)
 		{
@@ -588,11 +605,11 @@ int main(int argc, char **argv)
 			trigger_measurement(handle);
 
 			struct timespec req,rem;
-			req.tv_sec  = (long)( (delta_t-0.015));
-			req.tv_nsec = (long)(((delta_t-0.015)-req.tv_sec)*1000000000L);
+			req.tv_sec  = (long)( (delta_t));
+			req.tv_nsec = (long)(((delta_t)-req.tv_sec)*1000000000L);
 			nanosleep(&req, &rem);
 
-			double Tsec = single_readout(f, handle, T_start, ch1, ch2, ch3, ch4, verbose, resistance, a,b);
+			double Tsec = single_readout(f, handle, T_start, ch1, ch2, ch3, ch4, verbose, resistance, a,b, temp_compensation);
 			if (Tmax != 0 && Tsec > Tmax) break;
 			
 		}
