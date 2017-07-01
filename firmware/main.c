@@ -15,7 +15,39 @@
 uint8_t adc_buffer[5][3]; // the data buffer for the 4 channels with 3 bytes each. 5th channel is for on-board diode
 uint8_t R_buffer[5][3];
 
+// buffer for calibration coefficents: delta_R = a - b*V_diode
+uint8_t calib_buffer_a[4]= {0xff, 0xff, 0xff, 0xff}; // value is ( buffer[0]<<24 | buffer[1]<<16 | buffer[2]<<8 | buffer[3] ) / 2^32
+uint8_t calib_buffer_b[4]= {0xff, 0xff, 0xff, 0xff}; // value is ( buffer[0]<<24 | buffer[1]<<16 | buffer[2]<<8 | buffer[3] ) / 2^32
+
 uint8_t do_measurement = 0;
+
+#define CAL_START_ADDR 0x100
+
+
+void EEPROM_write(unsigned int uiAddress, unsigned char ucData)
+{
+	// Wait for completion of previous write 
+	while(EECR & (1<<EEPE));
+	// Set up address and Data Registers 
+	EEAR = uiAddress;
+	EEDR = ucData;
+	// Write logical one to EEMPE 
+	EECR |= (1<<EEMPE);
+	// Start eeprom write by setting EEPE 
+	EECR |= (1<<EEPE);
+}
+
+unsigned char EEPROM_read(unsigned int uiAddress)
+{
+	// Wait for completion of previous write
+	while(EECR & (1<<EEPE));
+	// Set up address register
+	EEAR = uiAddress;
+	// Start eeprom read by writing EERE
+	EECR |= (1<<EERE);
+	// Return data from Data Register
+	return EEDR;
+}
 
 ISR(PCINT0_vect)
 {
@@ -121,6 +153,72 @@ USB_PUBLIC uchar usbFunctionSetup(uchar data[8])
 		}  
 		return 8;
 	}   
+	if(rq->bRequest == 7)  
+	{  
+		// if calib_buffer was not yet restored from eeprom, do it now)
+		if ((calib_buffer_a[0] & calib_buffer_a[1] & calib_buffer_a[2] & calib_buffer_a[3] & 
+			calib_buffer_a[0] & calib_buffer_a[1] & calib_buffer_a[2] & calib_buffer_a[3]) == 0xff)
+		{
+			for (int i = 0; i < 4; ++i)
+				calib_buffer_a[i] = EEPROM_read(CAL_START_ADDR + i);
+			for (int i = 0; i < 4; ++i)
+				calib_buffer_b[i] = EEPROM_read(CAL_START_ADDR + 4 + i);
+		}
+		// return calibration coefficients
+		replyBuf[0] = calib_buffer_a[0];
+		replyBuf[1] = calib_buffer_a[1];
+		replyBuf[2] = calib_buffer_a[2];
+		replyBuf[3] = calib_buffer_a[3];
+		replyBuf[4] = calib_buffer_b[0];
+		replyBuf[5] = calib_buffer_b[1];
+		replyBuf[6] = calib_buffer_b[2];
+		replyBuf[7] = calib_buffer_b[3];
+		return 8;
+	}   	
+	if(rq->bRequest == 8)  
+	{  
+		// receive calibration coefficients
+		calib_buffer_a[0] = rq->wValue.bytes[1];
+		calib_buffer_a[1] = rq->wValue.bytes[0];
+		replyBuf[0] = calib_buffer_a[0];
+		replyBuf[1] = calib_buffer_a[1];
+		EEPROM_write(CAL_START_ADDR + 0, calib_buffer_a[0]);
+		EEPROM_write(CAL_START_ADDR + 1, calib_buffer_a[1]);
+		return 2;
+	}   
+	if(rq->bRequest == 9)  
+	{  
+		// receive calibration coefficients
+		calib_buffer_a[2] = rq->wValue.bytes[1];
+		calib_buffer_a[3] = rq->wValue.bytes[0];
+		replyBuf[0] = calib_buffer_a[2];
+		replyBuf[1] = calib_buffer_a[3];
+		EEPROM_write(CAL_START_ADDR + 2, calib_buffer_a[2]);
+		EEPROM_write(CAL_START_ADDR + 3, calib_buffer_a[3]);
+		return 2;
+	}   
+	if(rq->bRequest == 10)  
+	{  
+		// receive calibration coefficients
+		calib_buffer_b[0] = rq->wValue.bytes[1];
+		calib_buffer_b[1] = rq->wValue.bytes[0];
+		replyBuf[0] = calib_buffer_b[0];
+		replyBuf[1] = calib_buffer_b[1];
+		EEPROM_write(CAL_START_ADDR + 4, calib_buffer_b[0]);
+		EEPROM_write(CAL_START_ADDR + 5, calib_buffer_b[1]);
+		return 2;
+	}   
+	if(rq->bRequest == 11)  
+	{  
+		// receive calibration coefficients
+		calib_buffer_b[2] = rq->wValue.bytes[1];
+		calib_buffer_b[3] = rq->wValue.bytes[0];
+		replyBuf[0] = calib_buffer_b[2];
+		replyBuf[1] = calib_buffer_b[3];
+		EEPROM_write(CAL_START_ADDR + 6, calib_buffer_b[2]);
+		EEPROM_write(CAL_START_ADDR + 7, calib_buffer_b[3]);
+		return 2;
+	}   
 	return 0;
 }
 
@@ -156,7 +254,7 @@ int main(void)
 		{
 			ADS_ready = 1;
 			ADS_setup_enable_voltage_ref();
-			ADS_PGA_and_rate_setup(7, 0); // PGA:7 = 128, rate:3 = 40 SPS
+			ADS_PGA_and_rate_setup(7, 3); // PGA:7 = 128, rate:3 = 40 SPS
 			ADS_IEXC_setup(3); // 1=50uA, 2=100uA, 3=250uA, 4=500uA, 5=750uA, 6=1mA, 7=1.5mA
 			ADS_no_MOSFET();
 			//ADS_setup_enable_offset_measurement();

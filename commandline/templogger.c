@@ -21,13 +21,18 @@
  * in firmware/usbdrv/USBID-License.txt.
  */
 
-#define PSCMD_ECHO              0
-#define PSCMD_READ_0_1          1
-#define PSCMD_READ_2_3          2
-#define PSCMD_READ_TEMP         3
-#define PSCMD_MEASURE           4
-#define PSCMD_READ_REGS_FIRST   5
-#define PSCMD_READ_REGS_SECOND  6
+#define PSCMD_ECHO                 0
+#define PSCMD_READ_0_1             1
+#define PSCMD_READ_2_3             2
+#define PSCMD_READ_TEMP            3
+#define PSCMD_MEASURE              4
+#define PSCMD_READ_REGS_FIRST      5
+#define PSCMD_READ_REGS_SECOND     6
+#define PSCMD_READ_CALIB_COEFF     7
+#define PSCMD_WRITE_CALIB_COEFFa1  8
+#define PSCMD_WRITE_CALIB_COEFFa2  9
+#define PSCMD_WRITE_CALIB_COEFFb1 10
+#define PSCMD_WRITE_CALIB_COEFFb2 11
 /* These are the vendor specific SETUP commands implemented by our USB device */
 
 #define MAX_V (1250.*196./218.)
@@ -173,14 +178,31 @@ double Temp(double R)
 	}
 }
 
-double R_temp_compensated(double R, int32_t V_diode)
+double R_temp_compensated(double R, int32_t V_diode, double a, double b)
 {
-	double a = 104.099;
-	double b = -0.0000133921;
-	return R * 100.0/(a+b*V_diode);
+	// double a = 104.099;
+	// double b = -0.0000133921;
+	// return R * 100.0/(a+b*V_diode);
+	double deltaR = a - b*V_diode;
+	return R - deltaR;
 }
 
-double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1, int ch2, int ch3, int ch4, int verbose, int resistance)
+void read_calibration_coefficients(usb_dev_handle *handle, double *a, double *b)
+{
+	unsigned char       buffer[8];
+	int                 nBytes;
+	nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_READ_CALIB_COEFF, 0, 0, (char *)buffer, sizeof(buffer), 5000);
+	if(nBytes < 8){
+		if(nBytes < 0)
+			fprintf(stderr, "USB error: %s\n", usb_strerror());
+		fprintf(stderr, "only %d bytes status received\n", nBytes);
+		exit(1);
+	}	
+	*a = 1.0*(uint32_t)(buffer[0]<<24 | buffer[1]<<16 | buffer[2]<<8 | buffer[3])/0x0000ffffu;
+	*b = 1.0*(uint32_t)(buffer[4]<<24 | buffer[5]<<16 | buffer[6]<<8 | buffer[7])/0xffffffffu;
+}
+
+double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1, int ch2, int ch3, int ch4, int verbose, int resistance, double a, double b)
 {
 	unsigned char       buffer[8];
 	int                 nBytes;
@@ -204,7 +226,7 @@ double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1,
 		fprintf(stderr, "only %d bytes status received\n", nBytes);
 		exit(1);
 	}
-	printf("%d bytes read\n", nBytes);
+
 	int32_t adc2 = ((buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | (buffer[3]))/256;
 	int32_t adc3 = ((buffer[4] << 24) | (buffer[5] << 16) | (buffer[6] << 8) | (buffer[7]))/256;
 
@@ -216,8 +238,10 @@ double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1,
 		fprintf(stderr, "only %d bytes status received\n", nBytes);
 		exit(1);
 	}
+
 	int32_t V_diode = ((buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | (buffer[3]))/256;
 	
+
 	int32_t adc0_corr = adc0;
 	int32_t adc1_corr = adc1;
 	int32_t adc2_corr = adc2;
@@ -226,10 +250,10 @@ double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1,
 	double R1    = Resistance(adc1_corr);  //   *100/97.985;
 	double R2    = Resistance(adc2_corr); //   *100/97.795;
 	double R3    = Resistance(adc3_corr); //   *100/97.650;
-	double R0_tc = R0;//R_temp_compensated(R0,V_diode);
-	double R1_tc = R1;//R_temp_compensated(R1,V_diode);
-	double R2_tc = R2;//R_temp_compensated(R2,V_diode);
-	double R3_tc = R3;//R_temp_compensated(R3,V_diode);
+	double R0_tc = R_temp_compensated(R0,V_diode,a,b);
+	double R1_tc = R_temp_compensated(R1,V_diode,a,b);
+	double R2_tc = R_temp_compensated(R2,V_diode,a,b);
+	double R3_tc = R_temp_compensated(R3,V_diode,a,b);
 	double T0    = Temp(R0_tc);
 	double T1    = Temp(R1_tc);
 	double T2    = Temp(R2_tc);
@@ -244,10 +268,10 @@ double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1,
 	fprintf(f,"%8.2f %8d ", T, V_diode);
 	if (resistance)
 	{
-		if (ch1) fprintf(f, "R %d ", adc0);
-		if (ch2) fprintf(f, "R %d ", adc1);
-		if (ch3) fprintf(f, "R %d ", adc2);
-		if (ch4) fprintf(f, "R %d ", adc3);
+		if (ch1) fprintf(f, "%lf ", R0);
+		if (ch2) fprintf(f, "%lf ", R1);
+		if (ch3) fprintf(f, "%lf ", R2);
+		if (ch4) fprintf(f, "%lf ", R3);
 	}
 	else
 	{
@@ -260,7 +284,7 @@ double single_readout(FILE *f, usb_dev_handle *handle, double T_start,  int ch1,
 	
 	if (verbose)
 	{
-		printf("time: %.2f    V_diode: %12d\n", T, V_diode);
+		printf("single_readout: time: %.2f    V_diode: %12d\n", T, V_diode);
 		if (verbose == 2)
 		{
 			if (ch1) printf("adc1: %12d   ", adc0_corr);
@@ -290,7 +314,7 @@ void trigger_measurement(usb_dev_handle *handle)
 	int                 nBytes;	
 	//printf("trigger measurement\n");
 	nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_MEASURE  , 0, 0, (char *)buffer, sizeof(buffer), 5000);
-	fprintf(stderr,"nBytes=%d",nBytes);
+	nBytes = nBytes;
 }
 
 void print_usage(char *argv0)
@@ -373,6 +397,27 @@ int main(int argc, char **argv)
 		}
 		printf("test succeeded\n");
 	}
+	else if (argc == 4 && argv[1][0] == '-' && argv[1][1] == 'c') 
+	{
+		float af,bf;
+		sscanf(argv[2],"%f",&af);
+		sscanf(argv[3],"%f",&bf);
+		uint32_t a = (uint32_t)(af*0x0000ffffu);
+		uint32_t b = (uint32_t)(bf*0xffffffffu);
+		printf("a=%d\n",a);
+		printf("b=%d\n",b);
+		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_WRITE_CALIB_COEFFa1, (a>>16)&0xffff, 0, (char *)buffer, sizeof(buffer), 5000);		
+		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_WRITE_CALIB_COEFFa2,      a &0xffff, 0, (char *)buffer, sizeof(buffer), 5000);		
+		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_WRITE_CALIB_COEFFb1, (b>>16)&0xffff, 0, (char *)buffer, sizeof(buffer), 5000);		
+		nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_WRITE_CALIB_COEFFb2,      b &0xffff, 0, (char *)buffer, sizeof(buffer), 5000);		
+		if(nBytes < 2){
+			if(nBytes < 0)
+				fprintf(stderr, "USB error: %s\n", usb_strerror());
+			exit(1);
+		}
+		printf("buffer[0] = 0x%08x\n", buffer[0]);
+		printf("buffer[1] = 0x%08x\n", buffer[1]);
+	}
 	else if (argc == 2 && argv[1][0] == '-' && argv[1][1] == 'r') 
 	{
 
@@ -430,6 +475,9 @@ int main(int argc, char **argv)
 		//nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_MEASURE  , 0, 0, (char *)buffer, sizeof(buffer), 5000);
 		trigger_measurement(handle);
 	}else {
+		double a,b;
+		read_calibration_coefficients(handle, &a, &b);
+		printf("calib: %lf - %lf\n", a, b);
 		// do a measurement
 		const char* filename = "temperature.dat";
 		int i;
@@ -477,10 +525,10 @@ int main(int argc, char **argv)
 					return 1;
 				}
 				sscanf(argv[i],"%f", &delta_t);
-				if (delta_t < 0.25) 
+				if (delta_t < 0.15) 
 				{
-					printf("delta_t too small, changing it to 0.25 sec\n");
-					delta_t = 0.25;
+					printf("delta_t too small, changing it to 0.15 sec\n");
+					delta_t = 0.15;
 				}
 				printf("taking one sample per %f seconds\n", delta_t);
 			}			
@@ -544,7 +592,7 @@ int main(int argc, char **argv)
 			req.tv_nsec = (long)(((delta_t-0.015)-req.tv_sec)*1000000000L);
 			nanosleep(&req, &rem);
 
-			double Tsec = single_readout(f, handle, T_start, ch1, ch2, ch3, ch4, verbose, resistance);
+			double Tsec = single_readout(f, handle, T_start, ch1, ch2, ch3, ch4, verbose, resistance, a,b);
 			if (Tmax != 0 && Tsec > Tmax) break;
 			
 		}
