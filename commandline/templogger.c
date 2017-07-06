@@ -319,7 +319,7 @@ void print_usage(char *argv0)
 	printf(" -o filename : name of data file. default is \"temperature.dat\"\n");
 	printf(" -N n        : stop measurement after n samples\n");
 	printf(" -t t        : stop measurement after t seconds\n");
-	printf(" -d delta    : take a sample every delta seconds. Default is 0.5 , min is 0.125\n");
+	printf(" -d delta    : take a sample every delta seconds. Default is 0.5 , min is 0.15\n");
 	printf(" -r          : read registers (for debugging purposes)\n");
 	printf(" -h          : output this help\n");
 	printf(" \n");
@@ -532,10 +532,10 @@ int main(int argc, char **argv)
 					return 1;
 				}
 				sscanf(argv[i],"%f", &delta_t);
-				if (delta_t < 0.12) 
+				if (delta_t < 0.15) 
 				{
 					printf("delta_t too small, changing it to 0.15 sec\n");
-					delta_t = 0.12;
+					delta_t = 0.15;
 				}
 				printf("taking one sample per %f seconds\n", delta_t);
 			}			
