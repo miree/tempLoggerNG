@@ -18,3 +18,11 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+# KiCad local history (per-user autosave snapshots, has its own nested git repo)
+.history/
+
+# Leftovers from a failed legacy symbol-rescue attempt (now fixed, see
+# tempLoggerNG-rescue.lib / localsymbols.lib / sym-lib-table instead)
+report.txt
+rescue-backup/

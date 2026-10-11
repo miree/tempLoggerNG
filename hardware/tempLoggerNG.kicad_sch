@@ -1,0 +1,10238 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "023308b6-0ff3-4d8f-bb0d-97d6cbb4c751")
+	(paper "A4")
+	(lib_symbols
+		(symbol "localsymbols:+5V"
+			(power global)
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_0"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "+5V"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 0.762) (xy 0 0.762) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "localsymbols:ADS1248"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -1.27 19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "ADS1248"
+				(at 12.7 -21.59 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 1.27 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TSSOP-28"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ADS1248_0_1"
+				(rectangle
+					(start -20.32 17.78)
+					(end 17.78 -20.32)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ADS1248_1_1"
+				(pin input line
+					(at -25.4 15.24 0)
+					(length 5.08)
+					(name "DVDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 12.7 0)
+					(length 5.08)
+					(name "DGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 10.16 0)
+					(length 5.08)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 7.62 0)
+					(length 5.08)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 5.08 0)
+					(length 5.08)
+					(name "REFP0/GPIO0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 2.54 0)
+					(length 5.08)
+					(name "REFN0/GPIO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 0 0)
+					(length 5.08)
+					(name "REFP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 -2.54 0)
+					(length 5.08)
+					(name "REFN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 -5.08 0)
+					(length 5.08)
+					(name "VREFOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 -7.62 0)
+					(length 5.08)
+					(name "VREFCOM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 -10.16 0)
+					(length 5.08)
+					(name "AIN0/IEXC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 -12.7 0)
+					(length 5.08)
+					(name "AIN1/IEXC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 -15.24 0)
+					(length 5.08)
+					(name "AIN4/IEXC/GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 -17.78 0)
+					(length 5.08)
+					(name "AIN5/IEXC/GPIO5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -17.78 180)
+					(length 5.08)
+					(name "AIN6/IEXC/GPIO6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -15.24 180)
+					(length 5.08)
+					(name "AIN7/IEXC/GPIO7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -12.7 180)
+					(length 5.08)
+					(name "AIN2/IEXC/GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -10.16 180)
+					(length 5.08)
+					(name "AIN3/IEXC/GPIO3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -7.62 180)
+					(length 5.08)
+					(name "IEXC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -5.08 180)
+					(length 5.08)
+					(name "IEXC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -2.54 180)
+					(length 5.08)
+					(name "AVSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 0 180)
+					(length 5.08)
+					(name "AVDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 2.54 180)
+					(length 5.08)
+					(name "START"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 5.08 180)
+					(length 5.08)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 7.62 180)
+					(length 5.08)
+					(name "~{DRDY}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 10.16 180)
+					(length 5.08)
+					(name "DOUT/~{DRDY}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 12.7 180)
+					(length 5.08)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 15.24 180)
+					(length 5.08)
+					(name "SCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "localsymbols:ATMEGA168A-A"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "IC"
+				(at -19.05 31.75 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "ATMEGA168A-A"
+				(at 10.16 -35.56 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TQFP32"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ATMEGA168A-A_0_1"
+				(rectangle
+					(start -19.05 30.48)
+					(end 21.59 -33.02)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ATMEGA168A-A_1_1"
+				(pin bidirectional line
+					(at 25.4 -20.32 180)
+					(length 3.81)
+					(name "(PCINT19/OC2B/INT1)PD3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -22.86 180)
+					(length 3.81)
+					(name "(PCINT20/XCK/T0)PD4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 -30.48 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 27.94 0)
+					(length 3.81)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 -27.94 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 25.4 0)
+					(length 3.81)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 12.7 180)
+					(length 3.81)
+					(name "(PCINT6/XTAL1/TOSC1)PB6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 10.16 180)
+					(length 3.81)
+					(name "(PCINT7/XTAL2/TOSC2)PB7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -25.4 180)
+					(length 3.81)
+					(name "(PCINT21/OC0B/T1)PD5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -27.94 180)
+					(length 3.81)
+					(name "(PCINT22/OC0A/AIN0)PD6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -30.48 180)
+					(length 3.81)
+					(name "(PCINT23/AIN1)PD7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 27.94 180)
+					(length 3.81)
+					(name "(PCINT0/CLKO/ICP1)PB0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 25.4 180)
+					(length 3.81)
+					(name "(PCINT1/OC1A)PB1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 22.86 180)
+					(length 3.81)
+					(name "(PCINT2/OC1B/~{SS})PB2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 20.32 180)
+					(length 3.81)
+					(name "(PCINT3/OC2A/MOSI)PB3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 17.78 180)
+					(length 3.81)
+					(name "(PCINT4/MISO)PB4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 15.24 180)
+					(length 3.81)
+					(name "(PCINT5/SCK)PB5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 20.32 0)
+					(length 3.81)
+					(name "AVCC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 -6.35 0)
+					(length 3.81)
+					(name "ADC6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -22.86 12.7 0)
+					(length 3.81)
+					(name "AREF"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -22.86 -25.4 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 -8.89 0)
+					(length 3.81)
+					(name "ADC7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 6.35 180)
+					(length 3.81)
+					(name "(PCINT8/ADC0)PC0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 3.81 180)
+					(length 3.81)
+					(name "(PCINT9/ADC1)PC1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 1.27 180)
+					(length 3.81)
+					(name "(PCINT10/ADC2)PC2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -1.27 180)
+					(length 3.81)
+					(name "(PCINT11/ADC3)PC3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -3.81 180)
+					(length 3.81)
+					(name "(PCINT12/SDA/ADC4)PC4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -6.35 180)
+					(length 3.81)
+					(name "(PCINT14/SCL/ADC5)PC5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -8.89 180)
+					(length 3.81)
+					(name "(PCINT14/~{RESET})PC6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -12.7 180)
+					(length 3.81)
+					(name "(PCINT16/RXD)PD0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -15.24 180)
+					(length 3.81)
+					(name "(PCINT17/TXD)PD1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -17.78 180)
+					(length 3.81)
+					(name "(PCINT18/INT0)PD2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "localsymbols:CRYSTAL"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "X"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "CRYSTAL"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CRYSTAL_0_1"
+				(polyline
+					(pts
+						(xy -2.54 2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CRYSTAL_1_1"
+				(pin passive line
+					(at -7.62 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "localsymbols:MOS_N"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 0.254 4.318 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "MOS_N"
+				(at 0.254 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MOS_N_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -1.27 2.54)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -3.81) (xy 0 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0.762) (xy 1.27 -0.762) (xy 0 0) (xy 1.27 0.762) (xy 1.27 0.762)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MOS_N_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "D"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "G"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "G"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "localsymbols:MR-AVR-ISP-6"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "CON"
+				(at -2.032 6.096 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MR-AVR-ISP-6"
+				(at -6.096 -5.842 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "AVR-ISP-6"
+				(at -13.208 1.016 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MR-AVR-ISP-6_0_0"
+				(text "SCK"
+					(at -7.366 0.127 0)
+					(effects
+						(font
+							(size 1.143 1.143)
+							(bold yes)
+						)
+					)
+				)
+				(text "VCC"
+					(at 7.62 2.794 0)
+					(effects
+						(font
+							(size 1.143 1.143)
+							(bold yes)
+						)
+					)
+				)
+			)
+			(symbol "MR-AVR-ISP-6_0_1"
+				(rectangle
+					(start -4.572 5.08)
+					(end 4.572 4.572)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.572 -3.556)
+					(end 4.826 -4.064)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.445 5.08)
+					(end -4.953 1.016)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.445 -4.064)
+					(end -4.953 -1.016)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 4.572 5.08)
+					(end 5.08 -4.064)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "MR-AVR-ISP-6_1_0"
+				(text "MISO"
+					(at -7.8232 2.5908 0)
+					(effects
+						(font
+							(size 1.143 1.143)
+							(bold yes)
+						)
+					)
+				)
+				(text "RST"
+					(at -7.366 -2.54 0)
+					(effects
+						(font
+							(size 1.143 1.143)
+							(bold yes)
+						)
+					)
+				)
+				(text "GND"
+					(at 7.874 -2.667 0)
+					(effects
+						(font
+							(size 1.143 1.143)
+							(bold yes)
+						)
+					)
+				)
+				(text "MOSI"
+					(at 8.4328 -0.0508 0)
+					(effects
+						(font
+							(size 1.143 1.143)
+							(bold yes)
+						)
+					)
+				)
+			)
+			(symbol "MR-AVR-ISP-6_1_1"
+				(pin passive line
+					(at -3.81 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "localsymbols:USB-MINI-B"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "CON"
+				(at -6.35 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "USB-MINI-B"
+				(at -1.27 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "USB-Mini-B-Jack"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "USB-MINI-B_0_1"
+				(rectangle
+					(start -8.89 10.16)
+					(end 8.89 -10.16)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USB-MINI-B_1_1"
+				(pin power_in line
+					(at -13.97 7.62 0)
+					(length 5.08)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -13.97 3.81 0)
+					(length 5.08)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -13.97 0 0)
+					(length 5.08)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -13.97 -3.81 0)
+					(length 5.08)
+					(name "ID"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -13.97 -7.62 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 13.97 7.62 180)
+					(length 5.08)
+					(name "SHELL1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 13.97 3.81 180)
+					(length 5.08)
+					(name "SHELL2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 13.97 -3.81 180)
+					(length 5.08)
+					(name "SHELL3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 13.97 -7.62 180)
+					(length 5.08)
+					(name "SHELL4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Value" "+3.3V-RESCUE-tempLoggerNG"
+				(at 0 2.794 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3.3V-RESCUE-tempLoggerNG_0_0"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(hide yes)
+					(name "+3.3V"
+						(effects
+							(font
+								(size 0.762 0.762)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.762 0.762)
+							)
+						)
+					)
+				)
+			)
+			(symbol "+3.3V-RESCUE-tempLoggerNG_0_1"
+				(circle
+					(center 0 1.524)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.016) (xy 0 1.016)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C-RESCUE-tempLoggerNG"
+				(at 1.27 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SM* C? C1-1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C-RESCUE-tempLoggerNG_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0.762) (xy 2.54 0.762)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.762) (xy 2.54 -0.762)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C-RESCUE-tempLoggerNG_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 4.318)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 4.318)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "GND-RESCUE-tempLoggerNG"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND-RESCUE-tempLoggerNG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.778) (xy 0.762 -1.778) (xy 0 -2.54) (xy -0.762 -1.778) (xy 0 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND-RESCUE-tempLoggerNG_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tempLoggerNG-rescue:NCP1117ST33T3G-RESCUE-tempLoggerNG"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 3.81 -4.9784 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "NCP1117ST33T3G-RESCUE-tempLoggerNG"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT223"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NCP1117ST33T3G-RESCUE-tempLoggerNG_0_1"
+				(rectangle
+					(start -5.08 -3.81)
+					(end 5.08 3.81)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NCP1117ST33T3G-RESCUE-tempLoggerNG_1_1"
+				(pin output line
+					(at 0 -6.35 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 10.16 1.27 180)
+					(length 5.08)
+					(name "VO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 1.27 0)
+					(length 5.08)
+					(name "VI"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tempLoggerNG-rescue:R-RESCUE-tempLoggerNG"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R-RESCUE-tempLoggerNG"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R? SM0603 SM0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R-RESCUE-tempLoggerNG_0_1"
+				(rectangle
+					(start -1.016 3.81)
+					(end 1.016 -3.81)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R-RESCUE-tempLoggerNG_1_1"
+				(pin passive line
+					(at 0 6.35 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Pull-up resistor to prevent \nslave SPI device from being\nactive if master doesn't\nwant it to be active \n(e.g. while programming)"
+		(exclude_from_sim no)
+		(at 119.38 127.635 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7a51bb8-cda6-4055-a23e-7178affceac9")
+	)
+	(junction
+		(at 177.8 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01074340-44a3-4d54-9984-19579522a685")
+	)
+	(junction
+		(at 271.78 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0380c91a-1106-4764-a034-97635b9b2c3d")
+	)
+	(junction
+		(at 177.8 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "053b18a7-fe7d-4c05-adbc-da4f7c04ab0a")
+	)
+	(junction
+		(at 148.59 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0db07669-7db0-44d6-b892-a51225cda75b")
+	)
+	(junction
+		(at 82.55 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1e95c710-0116-4f89-83eb-60a8bad7b115")
+	)
+	(junction
+		(at 16.51 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "26bcebe3-3588-41a2-aef0-ca684d4d2c68")
+	)
+	(junction
+		(at 170.18 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3d6799d3-ee78-4c1d-b0a3-294dcfa0719e")
+	)
+	(junction
+		(at 16.51 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3da9a53f-951c-4574-b8db-67c79b3c4230")
+	)
+	(junction
+		(at 157.48 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47b08690-1614-453d-a572-01fcc7b16559")
+	)
+	(junction
+		(at 271.78 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a92ee33-2e37-4d9b-afc7-a8e4114c76c0")
+	)
+	(junction
+		(at 177.8 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e3fecda-e310-4d5f-a96d-7eaa8053add9")
+	)
+	(junction
+		(at 16.51 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "50295a9a-1d23-49a5-97cf-ce6dfe163f55")
+	)
+	(junction
+		(at 177.8 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "517cf1b6-c5b8-4549-819e-4b1f3ef0439b")
+	)
+	(junction
+		(at 153.67 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "550ba076-a3e2-4431-85bd-9a9edf29a62d")
+	)
+	(junction
+		(at 177.8 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "64fb3f65-c188-42d0-b317-0842221ede96")
+	)
+	(junction
+		(at 271.78 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c6994e8-8c9a-4d3b-91f1-ad70978a7b0b")
+	)
+	(junction
+		(at 271.78 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ce99469-33ca-4f38-bef7-21e2e86ca907")
+	)
+	(junction
+		(at 236.22 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7cd51f1c-b70e-4d9b-bd6a-fbcd8d1db846")
+	)
+	(junction
+		(at 16.51 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "832a62e8-ccc8-4067-9f56-86581aa591e3")
+	)
+	(junction
+		(at 30.48 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88a82049-0556-48be-972e-b94f0025cbec")
+	)
+	(junction
+		(at 116.84 168.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "90505b80-0652-42c5-b06e-9800decd7c4b")
+	)
+	(junction
+		(at 271.78 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9360b8ab-a460-4ad6-b992-199287702bb4")
+	)
+	(junction
+		(at 60.96 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0274f48-0f45-4c78-a1c5-0e1b0f9774b0")
+	)
+	(junction
+		(at 226.06 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bb3a47c3-2890-4781-b199-6cbd992d6d86")
+	)
+	(junction
+		(at 111.76 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc35817e-494f-44cc-a31a-a7c7406682d9")
+	)
+	(junction
+		(at 177.8 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db51be82-8526-4c4b-8e3c-93f90a8c1fd7")
+	)
+	(junction
+		(at 16.51 181.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e11568fb-6de5-4433-bcee-210180451906")
+	)
+	(junction
+		(at 96.52 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e90522c1-7bca-48fd-b4ad-7c3adb182347")
+	)
+	(junction
+		(at 170.18 176.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f414a9dd-963f-45be-b2f6-5747ffd80ab7")
+	)
+	(junction
+		(at 170.18 168.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f79369b7-b30b-4951-945b-60be1384ab2d")
+	)
+	(junction
+		(at 271.78 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb5bd9d9-6061-47c1-860b-46bed8811799")
+	)
+	(wire
+		(pts
+			(xy 233.68 161.29) (xy 233.68 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0055fa33-b61b-4c33-af35-5b1208b6f278")
+	)
+	(wire
+		(pts
+			(xy 16.51 179.07) (xy 22.86 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "010acaa7-ccc3-49f7-9649-bf7d17ea912f")
+	)
+	(wire
+		(pts
+			(xy 30.48 104.14) (xy 35.56 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "014fd04e-84d6-4ec5-ad05-26c4615ffe55")
+	)
+	(wire
+		(pts
+			(xy 111.76 163.83) (xy 111.76 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0166859e-9596-44bc-93f3-728afb0c9541")
+	)
+	(wire
+		(pts
+			(xy 137.16 165.1) (xy 137.16 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02d7fc9e-1b54-4eb1-93dc-3e51cd24074d")
+	)
+	(wire
+		(pts
+			(xy 55.88 104.14) (xy 60.96 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02f3ddef-076e-4f4f-b7e1-0af1abf6e9d2")
+	)
+	(wire
+		(pts
+			(xy 157.48 34.29) (xy 157.48 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0324a3a4-143e-4924-be9a-6478779aaec2")
+	)
+	(wire
+		(pts
+			(xy 234.95 54.61) (xy 215.9 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "039d11ca-251f-43f5-8538-1e8912ccb061")
+	)
+	(wire
+		(pts
+			(xy 215.9 59.69) (xy 229.87 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06a6fe1c-8aef-463d-b03b-097fca95b885")
+	)
+	(wire
+		(pts
+			(xy 218.44 147.32) (xy 218.44 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c6668e4-2df6-41ec-ab0e-17632449f7e7")
+	)
+	(wire
+		(pts
+			(xy 163.83 71.12) (xy 163.83 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f2a6ace-6623-43d0-b6bc-59cb8bcbeff6")
+	)
+	(wire
+		(pts
+			(xy 165.1 62.23) (xy 167.64 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10594a09-5d3d-4a62-8a80-a9843a2dafa7")
+	)
+	(wire
+		(pts
+			(xy 71.12 184.15) (xy 85.09 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10c21958-305d-4623-bc8e-7c0ec6df162f")
+	)
+	(wire
+		(pts
+			(xy 229.87 134.62) (xy 238.76 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10ef4998-88f3-4675-bc66-cb9b048eb7fb")
+	)
+	(wire
+		(pts
+			(xy 82.55 92.71) (xy 109.22 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "110717aa-fec7-4b2d-9a88-7f2e27c87a46")
+	)
+	(wire
+		(pts
+			(xy 167.64 31.75) (xy 153.67 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "110ca8c8-5f77-4777-9ed4-063d934590e8")
+	)
+	(wire
+		(pts
+			(xy 22.86 125.73) (xy 16.51 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11981c00-a673-49e6-b668-f72ad2820537")
+	)
+	(wire
+		(pts
+			(xy 167.64 29.21) (xy 153.67 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "126c2e62-6eba-4be2-b70a-6aad8c28ab94")
+	)
+	(wire
+		(pts
+			(xy 166.37 168.91) (xy 170.18 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12d5a99d-bdf0-4551-b723-f3736563fdf6")
+	)
+	(wire
+		(pts
+			(xy 217.17 91.44) (xy 217.17 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "132f328c-f509-4298-bf3f-af5295c80402")
+	)
+	(wire
+		(pts
+			(xy 236.22 44.45) (xy 236.22 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "133d2add-c06d-4fa2-8029-b7db717d807f")
+	)
+	(wire
+		(pts
+			(xy 88.9 105.41) (xy 82.55 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16b7fa32-e5fb-44d4-a7e1-4f7247537ae9")
+	)
+	(wire
+		(pts
+			(xy 226.06 49.53) (xy 226.06 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18424c9b-428c-455f-afd0-72807a630dbc")
+	)
+	(wire
+		(pts
+			(xy 71.12 168.91) (xy 120.65 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "187678d3-6d18-4cd2-b9bd-9bf0e334164a")
+	)
+	(wire
+		(pts
+			(xy 134.62 187.96) (xy 134.62 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a07bd13-47b8-4825-a402-ed1f5bee1fbd")
+	)
+	(wire
+		(pts
+			(xy 215.9 41.91) (xy 229.87 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cfbb437-68d5-4485-8cea-dda1c348b1d1")
+	)
+	(wire
+		(pts
+			(xy 218.44 104.14) (xy 218.44 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d9223cd-7f06-4520-b1bc-c6baea1af31a")
+	)
+	(wire
+		(pts
+			(xy 229.87 59.69) (xy 229.87 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1eb512cf-cd33-444f-9456-523322d00e42")
+	)
+	(wire
+		(pts
+			(xy 71.12 176.53) (xy 85.09 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f6c03e4-ed78-4b16-a64b-9de150a4b66c")
+	)
+	(wire
+		(pts
+			(xy 177.8 127) (xy 185.42 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f96e19f-4ec9-45b2-a479-505cf2a7c6af")
+	)
+	(wire
+		(pts
+			(xy 88.9 100.33) (xy 85.09 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20bd6790-e1fc-42b0-87f1-d01cc2716e3a")
+	)
+	(wire
+		(pts
+			(xy 133.35 172.72) (xy 138.43 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21313c82-dd65-4bd7-bd11-92b455a376bc")
+	)
+	(wire
+		(pts
+			(xy 213.36 127) (xy 238.76 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2247d27a-f5ef-449a-a743-405e209d0b14")
+	)
+	(wire
+		(pts
+			(xy 96.52 100.33) (xy 104.14 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "225a2765-c618-49e3-a336-11f87dbdb8c1")
+	)
+	(wire
+		(pts
+			(xy 109.22 92.71) (xy 109.22 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2309cec6-2be9-4a68-aefc-3a200356eb58")
+	)
+	(wire
+		(pts
+			(xy 238.76 87.63) (xy 233.68 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "235aa442-3bf0-4167-9233-66dd3db194b3")
+	)
+	(wire
+		(pts
+			(xy 238.76 130.81) (xy 228.6 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2424fb17-3f78-4bda-8943-a9ecc9ad1d27")
+	)
+	(wire
+		(pts
+			(xy 218.44 142.24) (xy 213.36 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2427d6f3-1b0a-42b3-9726-662dcbd953ad")
+	)
+	(wire
+		(pts
+			(xy 102.87 172.72) (xy 120.65 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24ad02fa-c8e1-40a6-8cf3-67d0cf4b4c81")
+	)
+	(wire
+		(pts
+			(xy 228.6 62.23) (xy 215.9 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25788986-fb67-43e8-a578-500eeeeaba02")
+	)
+	(wire
+		(pts
+			(xy 210.82 109.22) (xy 190.5 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "291c1370-3b9d-4f36-86d4-f01fe11eaccc")
+	)
+	(wire
+		(pts
+			(xy 167.64 34.29) (xy 157.48 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dae9f4a-d1f0-4227-bf75-2610363384d8")
+	)
+	(wire
+		(pts
+			(xy 166.37 176.53) (xy 170.18 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ea5dd1c-f257-479a-afdb-3990178a41fd")
+	)
+	(wire
+		(pts
+			(xy 213.36 87.63) (xy 215.9 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f47924b-b5e1-4c8e-8c16-875a8f3dc66a")
+	)
+	(wire
+		(pts
+			(xy 16.51 153.67) (xy 16.51 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fbe956e-e031-470f-b964-a65e941a1d29")
+	)
+	(wire
+		(pts
+			(xy 153.67 29.21) (xy 153.67 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3039d2f4-5c64-4c0d-81db-74c1096b9662")
+	)
+	(wire
+		(pts
+			(xy 71.12 171.45) (xy 102.87 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31c092d0-1f16-4f1c-a9bb-138f86304236")
+	)
+	(wire
+		(pts
+			(xy 158.75 76.2) (xy 158.75 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "323c64b6-f32b-4494-a725-bae65fe7a2ff")
+	)
+	(wire
+		(pts
+			(xy 160.02 57.15) (xy 167.64 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "331314d2-7c7a-4477-afb3-8d0c63c19d6b")
+	)
+	(wire
+		(pts
+			(xy 160.02 74.93) (xy 160.02 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3408a173-adb1-470e-904f-56e294094473")
+	)
+	(wire
+		(pts
+			(xy 220.98 130.81) (xy 220.98 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3410a35c-0a72-42b7-933e-07cb801f2e56")
+	)
+	(wire
+		(pts
+			(xy 238.76 91.44) (xy 234.95 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34f78145-b506-4193-99d6-89252a542b65")
+	)
+	(wire
+		(pts
+			(xy 16.51 123.19) (xy 16.51 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36dbae14-30e8-4ce6-9391-aa707f4ec427")
+	)
+	(wire
+		(pts
+			(xy 266.7 87.63) (xy 271.78 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "373f0ea2-e5ad-4e73-874c-aa4fb78f80e2")
+	)
+	(wire
+		(pts
+			(xy 71.12 162.56) (xy 86.36 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3766b373-260d-485c-893e-029aeefa011c")
+	)
+	(wire
+		(pts
+			(xy 218.44 99.06) (xy 213.36 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a518a21-3b85-462f-bb0d-d6b66ce26570")
+	)
+	(wire
+		(pts
+			(xy 133.35 163.83) (xy 133.35 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e53637d-143c-4424-8fb8-49ce7effe51f")
+	)
+	(wire
+		(pts
+			(xy 215.9 36.83) (xy 229.87 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ec0c2e1-7956-4675-a3ce-02a304d8759f")
+	)
+	(wire
+		(pts
+			(xy 185.42 138.43) (xy 177.8 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f3b4f1a-1625-4b5a-8634-e4bfab8a020d")
+	)
+	(wire
+		(pts
+			(xy 233.68 142.24) (xy 238.76 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "403333f6-0ad2-421e-88c4-5723fb0924b5")
+	)
+	(wire
+		(pts
+			(xy 82.55 102.87) (xy 82.55 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4249b7dc-5373-4b20-82e7-ae702c62223d")
+	)
+	(wire
+		(pts
+			(xy 71.12 166.37) (xy 85.09 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "428f3ce4-547a-42ed-bcc6-7b9420adafb3")
+	)
+	(wire
+		(pts
+			(xy 148.59 64.77) (xy 152.4 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "452e4d45-0005-46a3-befa-64998fe52439")
+	)
+	(wire
+		(pts
+			(xy 213.36 130.81) (xy 220.98 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45a851ea-2888-4abd-a522-8530fbcf7602")
+	)
+	(wire
+		(pts
+			(xy 138.43 165.1) (xy 137.16 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4635e12d-dbec-48e1-b85f-2127200a1c19")
+	)
+	(wire
+		(pts
+			(xy 102.87 171.45) (xy 102.87 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48c1835e-1d99-4950-a102-b1d2442b3f52")
+	)
+	(wire
+		(pts
+			(xy 246.38 44.45) (xy 250.19 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48e16f06-0c2d-40af-8954-dfdcc331be41")
+	)
+	(wire
+		(pts
+			(xy 152.4 64.77) (xy 152.4 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49e410b6-30f5-4cc0-9a0e-13752a6ed64e")
+	)
+	(wire
+		(pts
+			(xy 104.14 102.87) (xy 96.52 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a467e42-f714-4133-8cd5-b08167261121")
+	)
+	(wire
+		(pts
+			(xy 21.59 153.67) (xy 21.59 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ba4aa4a-0174-4bb4-b584-bd5ca014b621")
+	)
+	(wire
+		(pts
+			(xy 233.68 87.63) (xy 233.68 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d3fe49c-9884-4313-ab01-283318327fb3")
+	)
+	(wire
+		(pts
+			(xy 185.42 142.24) (xy 177.8 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d42ab1f-f4ac-461a-8e08-2fe650f4b7f5")
+	)
+	(wire
+		(pts
+			(xy 233.68 147.32) (xy 233.68 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dc785d6-6cec-46a5-bd8b-984af64f4341")
+	)
+	(wire
+		(pts
+			(xy 210.82 152.4) (xy 190.5 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f659a62-7ae6-4474-aa8a-a2e4f94b94dd")
+	)
+	(wire
+		(pts
+			(xy 218.44 161.29) (xy 218.44 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50574d26-ee27-4849-bec2-7af2fc488972")
+	)
+	(wire
+		(pts
+			(xy 116.84 168.91) (xy 116.84 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5739cec3-d970-475a-beab-690892752a65")
+	)
+	(wire
+		(pts
+			(xy 133.35 168.91) (xy 138.43 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5821b5cb-64ee-4dde-ab60-728bac1fc88f")
+	)
+	(wire
+		(pts
+			(xy 86.36 149.86) (xy 86.36 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "597dfe16-15df-461e-938b-070af589beaf")
+	)
+	(wire
+		(pts
+			(xy 71.12 181.61) (xy 85.09 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a73c495-bf2d-459e-8128-e0f4db5bc341")
+	)
+	(wire
+		(pts
+			(xy 215.9 29.21) (xy 229.87 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ad9fcce-2896-425b-bc84-5bdf454cd968")
+	)
+	(wire
+		(pts
+			(xy 88.9 102.87) (xy 82.55 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b382de5-e2ce-4feb-9fe6-c0456419d1ac")
+	)
+	(wire
+		(pts
+			(xy 170.18 165.1) (xy 166.37 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c70fe1f-64c3-404b-a6e1-297f51b4f4ab")
+	)
+	(wire
+		(pts
+			(xy 222.25 69.85) (xy 165.1 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5df7456b-bda8-4a99-b589-b4be54ecc61e")
+	)
+	(wire
+		(pts
+			(xy 152.4 52.07) (xy 167.64 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ed15b26-6ce2-4146-afc0-7a4e227c2490")
+	)
+	(wire
+		(pts
+			(xy 228.6 130.81) (xy 228.6 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f4c4835-e1ae-4a09-a14a-bd0d07bfdf79")
+	)
+	(wire
+		(pts
+			(xy 234.95 91.44) (xy 234.95 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "604492c2-58e1-4a98-be88-800713f10729")
+	)
+	(wire
+		(pts
+			(xy 116.84 163.83) (xy 120.65 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6494ffe8-1233-4e27-850f-058efabf320c")
+	)
+	(wire
+		(pts
+			(xy 109.22 138.43) (xy 71.12 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64a3c0cd-ea09-4b75-84de-ad166110d0a2")
+	)
+	(wire
+		(pts
+			(xy 185.42 99.06) (xy 177.8 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65876cae-d36f-40fe-bb97-1b53aa0005d2")
+	)
+	(wire
+		(pts
+			(xy 185.42 130.81) (xy 177.8 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "661b0138-83f5-447e-9f55-bb1dbfffd012")
+	)
+	(wire
+		(pts
+			(xy 100.33 105.41) (xy 100.33 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "667ded13-7bed-42b2-a13b-8c2015073070")
+	)
+	(wire
+		(pts
+			(xy 177.8 83.82) (xy 185.42 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67aaed9c-0fb6-4a3a-a3f4-92bded686e14")
+	)
+	(wire
+		(pts
+			(xy 241.3 152.4) (xy 265.43 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6811569e-aa3e-4ed7-9153-188c8dbfe36c")
+	)
+	(wire
+		(pts
+			(xy 233.68 104.14) (xy 233.68 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69899e21-acfe-40d4-ad7d-75df21e910cb")
+	)
+	(wire
+		(pts
+			(xy 222.25 134.62) (xy 222.25 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69bbea26-2943-43d7-b705-61219366e571")
+	)
+	(wire
+		(pts
+			(xy 185.42 95.25) (xy 177.8 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b05985b-d3e8-4d14-a7b6-d73b25eb8aea")
+	)
+	(wire
+		(pts
+			(xy 148.59 49.53) (xy 167.64 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b77a74d-54dd-4631-b126-6f6475395d2c")
+	)
+	(wire
+		(pts
+			(xy 104.14 133.35) (xy 104.14 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fc0bdbf-4354-41d2-b9ee-0e3a773f8e9a")
+	)
+	(wire
+		(pts
+			(xy 165.1 69.85) (xy 165.1 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71350b10-23a7-47a0-9d8d-66b9e146c2ae")
+	)
+	(wire
+		(pts
+			(xy 215.9 39.37) (xy 229.87 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "754a40f9-0d81-40eb-9cbb-d09e17a6cb31")
+	)
+	(wire
+		(pts
+			(xy 166.37 180.34) (xy 170.18 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78e66201-6b21-40d6-8266-1b17eaf1bd60")
+	)
+	(wire
+		(pts
+			(xy 217.17 74.93) (xy 160.02 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a8c4e77-3236-49e8-984c-a4f881cbb6cb")
+	)
+	(wire
+		(pts
+			(xy 111.76 140.97) (xy 111.76 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7aa6b227-6cc1-4469-bc33-a41d83fed255")
+	)
+	(wire
+		(pts
+			(xy 60.96 104.14) (xy 60.96 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7be10b81-4674-49fe-90ec-edcc0bfb7254")
+	)
+	(wire
+		(pts
+			(xy 104.14 100.33) (xy 104.14 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cb2d626-52d1-4b2b-b868-78eafb9b0ecb")
+	)
+	(wire
+		(pts
+			(xy 16.51 133.35) (xy 22.86 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80c12ac7-8505-4bcd-8a4e-52a24ecb9da0")
+	)
+	(wire
+		(pts
+			(xy 71.12 128.27) (xy 115.57 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8173d45c-ee3e-4ab8-ba81-0b239f4703bf")
+	)
+	(wire
+		(pts
+			(xy 266.7 142.24) (xy 271.78 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86716377-c008-4ee2-aff3-ca071f8e9453")
+	)
+	(wire
+		(pts
+			(xy 85.09 100.33) (xy 85.09 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86aadd2c-0cc2-4504-9975-d2e3d3f94095")
+	)
+	(wire
+		(pts
+			(xy 71.12 143.51) (xy 96.52 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88bb8289-ca18-4e06-998e-af60a0da9d27")
+	)
+	(wire
+		(pts
+			(xy 158.75 54.61) (xy 167.64 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "896afc3d-dac7-4914-843b-c53c374d6a33")
+	)
+	(wire
+		(pts
+			(xy 148.59 63.5) (xy 148.59 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e6c4565-2709-49ba-b03d-0faea7c35241")
+	)
+	(wire
+		(pts
+			(xy 138.43 36.83) (xy 140.97 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f034886-7e67-48a3-a4b2-1411166b3508")
+	)
+	(wire
+		(pts
+			(xy 266.7 130.81) (xy 271.78 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f32a68c-66bb-42f1-bf2a-b5c1b0e3b232")
+	)
+	(wire
+		(pts
+			(xy 185.42 87.63) (xy 177.8 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "959bc7bf-8f08-4367-9460-c18504648373")
+	)
+	(wire
+		(pts
+			(xy 215.9 76.2) (xy 158.75 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99581cd5-a43f-4cf8-8e0d-aab0f6cf5c1b")
+	)
+	(wire
+		(pts
+			(xy 215.9 87.63) (xy 215.9 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a6371ac-709d-48ef-9479-8e31251a0877")
+	)
+	(wire
+		(pts
+			(xy 71.12 140.97) (xy 111.76 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ccb3237-fc14-41b4-910c-08dc727c0cf8")
+	)
+	(wire
+		(pts
+			(xy 96.52 105.41) (xy 100.33 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ce98881-f2d4-4a8c-bf7f-f3a85a564d71")
+	)
+	(wire
+		(pts
+			(xy 215.9 34.29) (xy 229.87 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f9bce2a-1806-43a8-bfb9-12833b74cce9")
+	)
+	(wire
+		(pts
+			(xy 167.64 36.83) (xy 153.67 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ff81c21-8099-4078-9bdd-176c669e2913")
+	)
+	(wire
+		(pts
+			(xy 45.72 116.84) (xy 45.72 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a051579f-e656-414b-9f11-6b04f8ba7445")
+	)
+	(wire
+		(pts
+			(xy 233.68 57.15) (xy 215.9 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a20e7d40-1f92-490d-b9c7-9231611eb408")
+	)
+	(wire
+		(pts
+			(xy 96.52 163.83) (xy 96.52 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2b5bc4e-bdc6-4885-bb1c-940ad256efc7")
+	)
+	(wire
+		(pts
+			(xy 30.48 116.84) (xy 30.48 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3abfb65-4abf-4639-bbbc-bdd0feb763f8")
+	)
+	(wire
+		(pts
+			(xy 71.12 130.81) (xy 99.06 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3f63a4a-e6eb-43d9-a787-c52d5a1eaf33")
+	)
+	(wire
+		(pts
+			(xy 96.52 143.51) (xy 96.52 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a431fcce-752b-48c6-b439-40a88510935e")
+	)
+	(wire
+		(pts
+			(xy 177.8 127) (xy 177.8 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7df0902-6ed3-4f19-91fe-746b9f2ed7bf")
+	)
+	(wire
+		(pts
+			(xy 266.7 99.06) (xy 271.78 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac36bfaa-56c8-4fc0-95df-34b9129b4d88")
+	)
+	(wire
+		(pts
+			(xy 266.7 138.43) (xy 271.78 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae48c217-7a90-4e4a-8300-8a2fe4daa57c")
+	)
+	(wire
+		(pts
+			(xy 271.78 83.82) (xy 266.7 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af6a8b9d-4572-4f79-a76e-6bc3df41b46d")
+	)
+	(wire
+		(pts
+			(xy 71.12 125.73) (xy 99.06 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af81f880-de3b-4575-b6ae-b9d808014dd5")
+	)
+	(wire
+		(pts
+			(xy 115.57 115.57) (xy 115.57 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2c0338f-e7c6-4073-80f2-5e7f6c89bb91")
+	)
+	(wire
+		(pts
+			(xy 163.83 59.69) (xy 167.64 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5ce1fb4-9a4b-4119-94c0-760a5b6c0ec0")
+	)
+	(wire
+		(pts
+			(xy 71.12 133.35) (xy 104.14 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5fb8260-b122-4f17-b7c4-96f833cad6be")
+	)
+	(wire
+		(pts
+			(xy 30.48 101.6) (xy 30.48 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6b666e2-857f-4fd9-a6ca-fc4099bed7c8")
+	)
+	(wire
+		(pts
+			(xy 106.68 95.25) (xy 106.68 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b71ca5c6-0bb2-47f9-8fb3-3128c843452e")
+	)
+	(wire
+		(pts
+			(xy 233.68 99.06) (xy 238.76 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b725e67a-96a9-4cb9-8f5d-fb1ed1a87000")
+	)
+	(wire
+		(pts
+			(xy 213.36 83.82) (xy 238.76 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b86e139d-6562-4eb6-b012-9eb911229d1b")
+	)
+	(wire
+		(pts
+			(xy 16.51 128.27) (xy 22.86 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbc3bae0-c4df-4320-9e82-e5673f292d1d")
+	)
+	(wire
+		(pts
+			(xy 82.55 105.41) (xy 82.55 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc5cdc9a-1c6b-47e2-853f-c6cdfcc382fe")
+	)
+	(wire
+		(pts
+			(xy 215.9 44.45) (xy 236.22 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be9f6f49-6331-495d-931e-dfb03cea57b6")
+	)
+	(wire
+		(pts
+			(xy 60.96 116.84) (xy 60.96 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf71f174-b1bb-4865-9f1f-b2be5c856665")
+	)
+	(wire
+		(pts
+			(xy 177.8 83.82) (xy 177.8 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c11fe72a-ee93-455b-a075-95b2ceb1adaf")
+	)
+	(wire
+		(pts
+			(xy 215.9 31.75) (xy 229.87 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c38f639f-f901-4439-9698-2924356e6469")
+	)
+	(wire
+		(pts
+			(xy 215.9 49.53) (xy 226.06 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3db4088-3ae8-4e26-9475-1a314adacac7")
+	)
+	(wire
+		(pts
+			(xy 213.36 134.62) (xy 222.25 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c43223ac-d4f7-40b1-a575-47cae75e7af0")
+	)
+	(wire
+		(pts
+			(xy 241.3 109.22) (xy 266.7 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8a990c7-89d8-423c-a9a4-56994653d1cf")
+	)
+	(wire
+		(pts
+			(xy 233.68 118.11) (xy 233.68 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9cc2d0e-4379-4ff8-9785-f7a1cd748649")
+	)
+	(wire
+		(pts
+			(xy 148.59 49.53) (xy 148.59 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9dfa72a-6171-45cf-bc4b-9c4a813b3267")
+	)
+	(wire
+		(pts
+			(xy 106.68 135.89) (xy 71.12 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca4a0a22-b741-40b2-ab8b-e9582d4022b9")
+	)
+	(wire
+		(pts
+			(xy 271.78 127) (xy 266.7 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb991684-fc03-4c9f-a67f-16ed957da6b5")
+	)
+	(wire
+		(pts
+			(xy 271.78 127) (xy 271.78 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d27df2b5-0ba6-412d-97fe-5c8a9f1168fd")
+	)
+	(wire
+		(pts
+			(xy 213.36 91.44) (xy 217.17 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7614941-e86d-48cf-8369-d74c4cab4caf")
+	)
+	(wire
+		(pts
+			(xy 170.18 165.1) (xy 170.18 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d96049ed-4bd1-4bdb-97dd-6c49f472096a")
+	)
+	(wire
+		(pts
+			(xy 218.44 118.11) (xy 218.44 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da261506-5850-41fc-acac-f5b6ce5fd1dc")
+	)
+	(wire
+		(pts
+			(xy 16.51 181.61) (xy 22.86 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de10595e-2fef-4334-afad-32d534716c02")
+	)
+	(wire
+		(pts
+			(xy 224.79 46.99) (xy 215.9 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de661881-c924-4a93-bc31-14e99e48d528")
+	)
+	(wire
+		(pts
+			(xy 134.62 180.34) (xy 138.43 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0f76f04-4e80-4726-8c34-9104292d68a6")
+	)
+	(wire
+		(pts
+			(xy 16.51 184.15) (xy 22.86 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4e5ae40-cbe2-4bf7-9a7b-6224e4785b5e")
+	)
+	(wire
+		(pts
+			(xy 85.09 95.25) (xy 106.68 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e92135a0-4ca3-488b-943c-5f4c86c93694")
+	)
+	(wire
+		(pts
+			(xy 143.51 29.21) (xy 140.97 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb351677-2a78-4a01-920d-e426fa503452")
+	)
+	(wire
+		(pts
+			(xy 71.12 179.07) (xy 85.09 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eef74af3-bf8d-447e-a791-72176209c57a")
+	)
+	(wire
+		(pts
+			(xy 271.78 83.82) (xy 271.78 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f69bddc6-cde9-4b24-b1d6-c8c4fc27b5a3")
+	)
+	(wire
+		(pts
+			(xy 266.7 95.25) (xy 271.78 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f89e5903-7367-4889-8e6c-e581bc4c5455")
+	)
+	(wire
+		(pts
+			(xy 220.98 71.12) (xy 163.83 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbcaa073-33a3-4d9d-8fea-d9f296de9483")
+	)
+	(wire
+		(pts
+			(xy 16.51 179.07) (xy 16.51 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc96a39b-1116-4121-93a3-e041d343692a")
+	)
+	(wire
+		(pts
+			(xy 21.59 140.97) (xy 22.86 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff151f5c-a248-4fb8-ab6e-3d678a9f88e5")
+	)
+	(label "XTAL1"
+		(at 90.17 140.97 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "023aa7cd-10f8-441f-a6cf-af37a933f79d")
+	)
+	(label "ch67_activate"
+		(at 245.11 152.4 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "1675b91a-8279-437d-bd31-790d6d882524")
+	)
+	(label "ADS_RESET"
+		(at 72.39 166.37 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "3084f2bf-dbe1-4944-8a51-e39d1d7cb699")
+	)
+	(label "ADS_DOUT"
+		(at 87.63 135.89 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "34818b10-d360-4f68-bb61-f41a838eeee3")
+	)
+	(label "ADS_DOUT"
+		(at 218.44 34.29 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "36deb8e8-9564-479b-a2c9-eee880edba37")
+	)
+	(label "ch01_activate"
+		(at 72.39 176.53 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b0b84d7-3037-42bb-9339-3a4283182922")
+	)
+	(label "ch23_activate"
+		(at 245.11 109.22 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "504f90ab-bdb0-43fe-9a5a-b71d02926012")
+	)
+	(label "XTAL2"
+		(at 90.17 143.51 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a45dcf6-059f-4ec7-aecd-17de21daf9f4")
+	)
+	(label "ch01_activate"
+		(at 193.04 109.22 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "68772495-f830-47fa-a9aa-c7d516426a30")
+	)
+	(label "ADS_START"
+		(at 218.44 41.91 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e1d3203-dedb-45d6-8bd1-e89ccf22250a")
+	)
+	(label "D+"
+		(at 134.62 172.72 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "7e34bc24-9f33-4db1-a898-374450220229")
+	)
+	(label "D-"
+		(at 134.62 168.91 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "94cea108-0b77-49c4-b14b-abdaef48bd8a")
+	)
+	(label "ADS_RESET"
+		(at 154.94 36.83 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "9d264f1a-af0d-46b7-9210-d07208b6e620")
+	)
+	(label "ADS_CS"
+		(at 218.44 39.37 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f760a2a-d90f-41bc-8750-0ec7213d2c38")
+	)
+	(label "AVR_D+"
+		(at 86.36 171.45 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "a9530f93-3606-4aa6-b12c-69ab78bb63f7")
+	)
+	(label "ADS_DIN"
+		(at 87.63 133.35 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "afb222d6-f4cd-4418-a8f6-f9ad7814bc9c")
+	)
+	(label "ADS_DIN"
+		(at 218.44 31.75 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "b1c3dd04-f03d-4f55-9607-3c35eeb552b3")
+	)
+	(label "ch45_activate"
+		(at 194.31 152.4 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "bcc722d0-166f-45d5-9674-e92020b9d5dc")
+	)
+	(label "ch23_activate"
+		(at 72.39 179.07 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "c3072524-825a-404b-aae9-893356366740")
+	)
+	(label "ADS_START"
+		(at 87.63 125.73 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "c47f0045-4fe0-4ddc-bf4b-f89db0b5ca10")
+	)
+	(label "ADS_SCLK"
+		(at 87.63 138.43 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "c4c487a1-1a70-46bc-a9bc-5844969563d8")
+	)
+	(label "ADS_DRDY"
+		(at 218.44 36.83 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "c506316e-70ff-45be-8cfe-ca0e4e33e856")
+	)
+	(label "AVR_D-"
+		(at 86.36 168.91 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "c58e2148-066b-4679-a4c0-c6e50849cca1")
+	)
+	(label "ADS_SCLK"
+		(at 218.44 29.21 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9767dbc-cede-423e-9f22-752c120e44d0")
+	)
+	(label "ch45_activate"
+		(at 72.39 181.61 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1d55dcd-0c79-415c-87c7-ad2abf83bd8e")
+	)
+	(label "ch67_activate"
+		(at 72.39 184.15 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1f59e19-e009-48bc-9265-51ec30c832d8")
+	)
+	(label "ADS_DRDY"
+		(at 87.63 130.81 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4a45845-8fb2-4d71-824f-59d187e6712a")
+	)
+	(label "AVR_RESET"
+		(at 72.39 162.56 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "eb83bad5-bc8a-459a-88b6-e457cda236b6")
+	)
+	(label "ADS_CS"
+		(at 87.63 128.27 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "f5297fc4-48bb-4264-847a-02901ae42627")
+	)
+	(symbol
+		(lib_id "localsymbols:ATMEGA168A-A")
+		(at 45.72 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056619310")
+		(property "Reference" "IC1"
+			(at 26.67 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "ATMEGA168A-A"
+			(at 55.88 189.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "libcms:TQFP32"
+			(at 45.72 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f5b5cf4-8339-4c76-a80a-3c264d3efc92")
+		)
+		(pin "2"
+			(uuid "3ea5b1cb-cdbd-4266-98b4-03a8dc6f1bc8")
+		)
+		(pin "3"
+			(uuid "2e917c77-e8cf-4745-803e-8b39b72648f3")
+		)
+		(pin "4"
+			(uuid "9e716b11-0701-491c-84c6-67eff669a08a")
+		)
+		(pin "5"
+			(uuid "7e9c55c4-4ba7-4007-a8b1-80b1f36734f8")
+		)
+		(pin "6"
+			(uuid "a28098bd-ba8f-4eed-b965-daf96181f8dd")
+		)
+		(pin "7"
+			(uuid "5b346175-a183-4673-aa85-edc300a2f71b")
+		)
+		(pin "8"
+			(uuid "ddaada98-142c-4414-a1ff-9a545c0aa23f")
+		)
+		(pin "9"
+			(uuid "f7924909-c600-4ac0-a25c-7a60becd6e89")
+		)
+		(pin "10"
+			(uuid "60651b04-e654-4366-9480-785ca4685ef3")
+		)
+		(pin "11"
+			(uuid "f702753b-aaa3-47bc-8850-d8104b5797f1")
+		)
+		(pin "12"
+			(uuid "eda686b7-2cea-43c0-be36-931f6e1d363e")
+		)
+		(pin "13"
+			(uuid "ef889efe-c8ea-4400-8dad-9887555e6a62")
+		)
+		(pin "14"
+			(uuid "936fa5e0-f8a6-4a29-af7c-750c1914227e")
+		)
+		(pin "15"
+			(uuid "d2de9d85-a7cb-4d45-998a-31e0607c5051")
+		)
+		(pin "16"
+			(uuid "737f72a1-c191-4436-9979-e8a4d291d2c4")
+		)
+		(pin "17"
+			(uuid "f5fe8d75-4737-44a5-9fc5-a477e4bfa4c7")
+		)
+		(pin "18"
+			(uuid "4dcf3697-bf22-4344-aa30-111fc84db5ed")
+		)
+		(pin "19"
+			(uuid "8d31ffd8-288f-41fb-ac87-d463b5b3e55d")
+		)
+		(pin "20"
+			(uuid "308640bb-21b7-447e-ade4-016c07f6fac5")
+		)
+		(pin "21"
+			(uuid "1b28da63-5479-41f8-b9a6-47b674a4381f")
+		)
+		(pin "22"
+			(uuid "dc2024a7-05da-4d40-a433-ca92d84c6ddf")
+		)
+		(pin "23"
+			(uuid "fa601c2c-da1a-4593-811a-9368f6397553")
+		)
+		(pin "24"
+			(uuid "59d7a03d-12c7-4e5b-9a4b-7f592d19de89")
+		)
+		(pin "25"
+			(uuid "497544dd-9084-4560-82d0-4238226e10c1")
+		)
+		(pin "26"
+			(uuid "821dc1ba-3c8f-4acb-9043-92ab4d12d9eb")
+		)
+		(pin "27"
+			(uuid "7a428fce-3c5e-4d68-8b78-ebc58134fc2e")
+		)
+		(pin "28"
+			(uuid "3869b4c2-08fb-4cbb-af8b-fb8f925be7ff")
+		)
+		(pin "29"
+			(uuid "e7f7b8ab-6d36-4f14-aa8d-6ac29b51bb54")
+		)
+		(pin "30"
+			(uuid "d56bf0b7-4f6f-4b96-a94a-aed40eaaa7c0")
+		)
+		(pin "31"
+			(uuid "66f082aa-3d14-4437-bb10-e5e18c3844b1")
+		)
+		(pin "32"
+			(uuid "b3638a68-f4bc-4ab6-a812-282109d72cfb")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "IC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:ADS1248")
+		(at 193.04 44.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661a747")
+		(property "Reference" "U1"
+			(at 191.77 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "ADS1248"
+			(at 205.74 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Housings_SSOP:SSOP-28_5.3x10.2mm_Pitch0.65mm"
+			(at 194.31 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 193.04 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "795f0845-8216-4831-af83-e37c7c138a60")
+		)
+		(pin "2"
+			(uuid "f117106e-0488-4441-97a3-2d96c7e274ba")
+		)
+		(pin "3"
+			(uuid "3445ac60-5bfa-4bf1-af3e-5e3ff597ee80")
+		)
+		(pin "4"
+			(uuid "f41981a6-dd3f-47f5-8757-eb157fcaf3a5")
+		)
+		(pin "5"
+			(uuid "7d2d15aa-16ab-4120-b19f-96ded17e09d7")
+		)
+		(pin "6"
+			(uuid "b0a80db9-2129-45ef-89e0-5fd36d00b6ee")
+		)
+		(pin "7"
+			(uuid "1a9cd483-420d-409e-9e9c-f20f1f3fd5bc")
+		)
+		(pin "8"
+			(uuid "ac6c7f1b-b45b-4939-b3d1-3801e2c9c08d")
+		)
+		(pin "9"
+			(uuid "f3f10baf-ab17-4cbf-9179-331a8062bf65")
+		)
+		(pin "10"
+			(uuid "7ee279c5-24f0-4d7f-aa15-3db12fdedbfd")
+		)
+		(pin "11"
+			(uuid "b901f148-7a32-49a7-963b-5b80cf525a6c")
+		)
+		(pin "12"
+			(uuid "26fb5899-f635-4423-9d39-53ba1faefb39")
+		)
+		(pin "13"
+			(uuid "fe42f142-7ddb-4180-914f-a3fe63437299")
+		)
+		(pin "14"
+			(uuid "06e22035-e449-4b8b-bced-b84ca84d459d")
+		)
+		(pin "15"
+			(uuid "272f7887-cbd9-47e6-a978-9c62e82873d7")
+		)
+		(pin "16"
+			(uuid "0f0b2afb-a60a-410b-ac75-cef4d3800a87")
+		)
+		(pin "17"
+			(uuid "676bcd56-f6d0-4c1c-9abe-2fa2a2504017")
+		)
+		(pin "18"
+			(uuid "abb37d3e-d0ae-432a-957b-fcf398f8a2e6")
+		)
+		(pin "19"
+			(uuid "b597db97-1fa5-4d7a-9f7f-706ea6ac9b77")
+		)
+		(pin "20"
+			(uuid "c14ab226-5c5b-4ef9-86b8-78e5d282f98a")
+		)
+		(pin "21"
+			(uuid "56cc535c-68da-43ae-9da2-795a2c53010c")
+		)
+		(pin "22"
+			(uuid "d06cf4eb-676c-4789-86c0-4d0e12691234")
+		)
+		(pin "23"
+			(uuid "c772c4c4-a604-4d5b-929f-84c0212c9271")
+		)
+		(pin "24"
+			(uuid "9001ee24-ad3a-43b6-9478-b22abefe39da")
+		)
+		(pin "25"
+			(uuid "1f4f40ce-c60e-4102-9246-4184988e69a6")
+		)
+		(pin "26"
+			(uuid "6c06e751-1bbb-4a82-83e4-d2368cf89b90")
+		)
+		(pin "27"
+			(uuid "a318c722-7de4-414c-8b00-c9ed273d429e")
+		)
+		(pin "28"
+			(uuid "9557bb27-a54d-439e-bd88-28592b7c3545")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:CRYSTAL")
+		(at 104.14 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661a896")
+		(property "Reference" "X1"
+			(at 104.14 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "12MHz"
+			(at 104.14 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Crystals:Crystal_HC49-SD_SMD"
+			(at 104.14 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a39b1a4-5fe1-4230-88df-5ee76e1ef8e3")
+		)
+		(pin "2"
+			(uuid "36b78e1f-0dae-4058-aeef-4afb9beb4394")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "X1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 96.52 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661a975")
+		(property "Reference" "C5"
+			(at 96.52 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "15p"
+			(at 96.6724 158.369 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 97.4852 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5cc5a2df-0456-4357-90c9-5169fac23aa7")
+		)
+		(pin "2"
+			(uuid "cf91eea2-c87c-47f8-af64-88c1b107d234")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 111.76 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661a9ec")
+		(property "Reference" "C6"
+			(at 111.76 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "15p"
+			(at 111.9124 158.369 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 112.7252 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7d376b60-03f8-41dc-98e6-df3e6313bb3e")
+		)
+		(pin "2"
+			(uuid "8ed43f7e-48bc-49af-95b5-a044629da728")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 96.52 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661aa62")
+		(property "Reference" "#PWR01"
+			(at 96.52 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 165.608 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0501d706-0a05-4f47-be42-b816e07ac357")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 111.76 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661aa83")
+		(property "Reference" "#PWR02"
+			(at 111.76 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 111.76 165.608 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35bcf2f5-3739-4cf0-a426-494e6de5526c")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:MR-AVR-ISP-6")
+		(at 92.71 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661ae54")
+		(property "Reference" "CON1"
+			(at 90.678 96.774 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MR-AVR-ISP-6"
+			(at 86.614 108.712 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Pin_Headers:Pin_Header_Straight_2x03"
+			(at 79.502 101.854 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ab37f63f-0efd-4227-bfad-c7639e67c44a")
+		)
+		(pin "2"
+			(uuid "907dec0e-cffe-4a67-ab13-e4ebf00473f7")
+		)
+		(pin "3"
+			(uuid "26884f3f-0fda-4f08-bf55-f0df21c2f0a5")
+		)
+		(pin "4"
+			(uuid "8676e138-4133-42fd-8bbc-07a6978f44f7")
+		)
+		(pin "5"
+			(uuid "b1f03c14-56c7-4c13-bc98-21eece71c23d")
+		)
+		(pin "6"
+			(uuid "ec15593f-a787-4b26-92df-095f050ef269")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "CON1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG")
+		(at 86.36 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b096")
+		(property "Reference" "#PWR03"
+			(at 86.36 149.606 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 86.36 145.796 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e109a5bc-1f3c-4613-a346-79d748576c03")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:R-RESCUE-tempLoggerNG")
+		(at 86.36 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b0fb")
+		(property "Reference" "R1"
+			(at 88.392 156.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 86.5378 156.1846 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+			(at 84.582 156.21 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3f843084-3013-410e-81db-4cee63ada469")
+		)
+		(pin "2"
+			(uuid "1bcf2a07-d5b7-49ba-96ae-1453fcf1386a")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 100.33 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b212")
+		(property "Reference" "#PWR04"
+			(at 100.33 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 100.33 114.808 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4b0d6de6-fde9-4da5-9c9a-bea75d601397")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:+5V")
+		(at 104.14 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b26c")
+		(property "Reference" "#PWR05"
+			(at 104.14 96.774 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 104.14 96.774 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e1dac28a-e9e7-4585-8a3d-40507e764918")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:NCP1117ST33T3G-RESCUE-tempLoggerNG")
+		(at 45.72 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b2d6")
+		(property "Reference" "U2"
+			(at 45.72 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "NCP1117ST33T3G"
+			(at 45.72 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "SMD_Packages:SOT-223"
+			(at 45.72 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "905b7eba-59c9-407b-b04e-8d31c141d60b")
+		)
+		(pin "2"
+			(uuid "2304344f-7878-42a7-bc8f-b93671d84f08")
+		)
+		(pin "3"
+			(uuid "a63f2354-8507-42ec-8f2d-52b160ed8565")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:+5V")
+		(at 30.48 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b361")
+		(property "Reference" "#PWR06"
+			(at 30.48 99.314 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 30.48 99.314 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f945753c-e8b0-4d6d-baa8-5f3c1c4311b1")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG")
+		(at 60.96 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b3ca")
+		(property "Reference" "#PWR07"
+			(at 60.96 102.616 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 60.96 98.806 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "16b2c78b-333c-4f23-941d-f2e378f1c65d")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 30.48 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b3f5")
+		(property "Reference" "C3"
+			(at 30.48 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 30.6324 111.379 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 31.4452 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49933d5d-b356-4cd9-b92a-58262e074919")
+		)
+		(pin "2"
+			(uuid "13dd1518-2ae5-4e4e-8a85-0a84e3716642")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 60.96 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b4e3")
+		(property "Reference" "C4"
+			(at 60.96 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 61.1124 111.379 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 61.9252 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e4818045-cdde-4195-8a4d-4a32b57c2efb")
+		)
+		(pin "2"
+			(uuid "515c044d-cdf9-46e5-bbe7-ec28dc1a3e6b")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 30.48 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b537")
+		(property "Reference" "#PWR08"
+			(at 30.48 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 30.48 118.618 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b46bddf4-9ff3-4696-9e30-4967dfee6ca7")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 45.72 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b567")
+		(property "Reference" "#PWR09"
+			(at 45.72 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 118.618 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "96afbeba-ca8f-40c5-ba99-a5773fdd755f")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 60.96 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b590")
+		(property "Reference" "#PWR010"
+			(at 60.96 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 60.96 118.618 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c5549c92-7613-4be8-8f9f-e2e1bf4ac925")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:USB-MINI-B")
+		(at 152.4 172.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b750")
+		(property "Reference" "CON2"
+			(at 146.05 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "USB-MINI-B"
+			(at 151.13 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "localfootprints:USB_Mini-B"
+			(at 152.4 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d9c8fdc-1d15-4fbf-b358-a9645a0e2dd4")
+		)
+		(pin "2"
+			(uuid "79ac0a41-389b-4855-b9f8-413015488088")
+		)
+		(pin "3"
+			(uuid "8f83a19d-12e6-4938-adce-f8e7af2c7855")
+		)
+		(pin "4"
+			(uuid "8c721146-f0fb-4a7e-b846-fd4a2ac0e7c2")
+		)
+		(pin "5"
+			(uuid "98074984-02c1-4ef1-a42e-a3a107ce9be3")
+		)
+		(pin "6"
+			(uuid "02a401d2-cf93-4974-821a-2cb310b497d6")
+		)
+		(pin "7"
+			(uuid "5a82c064-0074-49a3-ad09-1d81bfe1ea98")
+		)
+		(pin "8"
+			(uuid "bca61615-56bc-46c8-b5b2-15679993dd2b")
+		)
+		(pin "9"
+			(uuid "6302ffc1-e4cf-4349-b011-ba25b90edb5c")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "CON2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:R-RESCUE-tempLoggerNG")
+		(at 127 172.72 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b873")
+		(property "Reference" "R4"
+			(at 127 174.752 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "68"
+			(at 127.0254 172.8978 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+			(at 127 170.942 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 127 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7670f079-90be-4ebd-ad88-f47f24427ab4")
+		)
+		(pin "2"
+			(uuid "84263a24-c089-4ec0-9412-6da538db1e5c")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:R-RESCUE-tempLoggerNG")
+		(at 127 168.91 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661b8f2")
+		(property "Reference" "R3"
+			(at 127 170.942 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "68"
+			(at 127.0254 169.0878 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+			(at 127 167.132 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 127 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c2972fc6-332e-41ea-bc98-2e1f7ebd9ad8")
+		)
+		(pin "2"
+			(uuid "fb6b0a34-7364-4cda-bbd4-b30bb239108f")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:+5V")
+		(at 137.16 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661bb24")
+		(property "Reference" "#PWR011"
+			(at 137.16 155.194 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 137.16 155.194 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5bc3584d-82f8-42c0-94fc-08c523507bc7")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG")
+		(at 133.35 160.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661bbad")
+		(property "Reference" "#PWR012"
+			(at 133.35 161.036 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 133.35 157.226 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ea1ccf6-fed3-44e4-ba30-44256109808d")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:R-RESCUE-tempLoggerNG")
+		(at 127 163.83 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661bbd4")
+		(property "Reference" "R2"
+			(at 127 165.862 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "1k5"
+			(at 127.0254 164.0078 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+			(at 127 162.052 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 127 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "04676075-ab07-4539-be6f-f6fb468f4d2a")
+		)
+		(pin "2"
+			(uuid "1150189c-4040-4422-a8fd-dc9c682cbdcf")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 170.18 187.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661bd86")
+		(property "Reference" "#PWR013"
+			(at 170.18 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 189.738 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b5ca41b3-c384-4126-a87a-e7bde4730dd4")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 134.62 187.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661bdc2")
+		(property "Reference" "#PWR014"
+			(at 134.62 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 189.738 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 134.62 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d00908c7-e40b-427d-a201-158851c599a0")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 16.51 191.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661c251")
+		(property "Reference" "#PWR015"
+			(at 16.51 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 16.51 193.548 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 191.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 191.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 16.51 191.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b01ca3bd-5eff-445a-aed3-fb2350925fca")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG")
+		(at 16.51 123.19 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661c405")
+		(property "Reference" "#PWR016"
+			(at 16.51 124.206 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 16.51 120.396 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 16.51 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "48b22d47-cb1a-4c6a-9453-f35aa26dc055")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 16.51 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661c539")
+		(property "Reference" "#PWR017"
+			(at 16.51 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 16.51 155.448 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 16.51 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "18a49105-e76b-4f94-aac6-45181ddf37e1")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 21.59 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661c56e")
+		(property "Reference" "#PWR018"
+			(at 21.59 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 21.59 155.448 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 21.59 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f090fd1e-e58a-4b96-b40b-21171a976040")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 21.59 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661c597")
+		(property "Reference" "C2"
+			(at 21.59 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 21.7424 148.209 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 22.5552 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 21.59 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "346e06c3-9201-4ecd-aa66-a015a73de318")
+		)
+		(pin "2"
+			(uuid "1c69bfab-9b5f-45c3-b76e-e366b949c027")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 16.51 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661c638")
+		(property "Reference" "C1"
+			(at 16.51 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 16.6624 148.209 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 17.4752 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 16.51 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "70b88ccd-c49a-4a98-9a5e-3d0126878b15")
+		)
+		(pin "2"
+			(uuid "a5d9dc5f-92ad-4a29-98c3-aff587fcd4d4")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 148.59 58.42 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661c866")
+		(property "Reference" "C8"
+			(at 148.59 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4u7"
+			(at 148.4376 56.261 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 147.6248 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "61dc4853-ee08-468d-bace-bcb344b2cf6f")
+		)
+		(pin "2"
+			(uuid "b5e58839-242a-46f8-9622-21ac7d9c55ae")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 148.59 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005661d3ae")
+		(property "Reference" "#PWR034"
+			(at 148.59 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 67.818 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dd3c61f9-8c74-4f92-9259-ef03ec612604")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG")
+		(at 153.67 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566203cc")
+		(property "Reference" "#PWR019"
+			(at 153.67 28.956 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 153.67 25.146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 153.67 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0c6ce0a0-c3e2-43db-a0c5-725b695520ef")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 153.67 31.75 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566204f8")
+		(property "Reference" "#PWR020"
+			(at 153.67 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 151.892 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 153.67 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4033699e-17d4-4a9d-8d5e-5b86901eb8a1")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG")
+		(at 236.22 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005662064b")
+		(property "Reference" "#PWR021"
+			(at 236.22 42.926 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 236.22 39.116 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e119107b-e355-4869-94cb-5f0b962c0311")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 224.79 46.99 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056620738")
+		(property "Reference" "#PWR022"
+			(at 224.79 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 226.568 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 224.79 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6fc96d3a-1655-4418-b769-2263f5bcd86e")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 241.3 44.45 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566207c9")
+		(property "Reference" "C10"
+			(at 243.84 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 239.141 44.6024 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 237.49 45.4152 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 241.3 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c2c250f-719f-4069-893a-0b25bae9f88a")
+		)
+		(pin "2"
+			(uuid "d04e0bd8-aa2a-4f6c-9e2e-a7a649ed7b79")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 250.19 44.45 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056620827")
+		(property "Reference" "#PWR023"
+			(at 250.19 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 251.968 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ba9cb28d-847f-4d36-a7be-7d1298cbd475")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:C-RESCUE-tempLoggerNG")
+		(at 148.59 29.21 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056620970")
+		(property "Reference" "C7"
+			(at 151.13 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 146.431 29.3624 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 144.78 30.1752 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c76c4061-dca6-44ab-bdb2-c51520cbe06d")
+		)
+		(pin "2"
+			(uuid "b352b500-31b7-4377-bbc4-1e6458d33726")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 140.97 29.21 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056620a16")
+		(property "Reference" "#PWR024"
+			(at 140.97 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.192 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f95346a1-8fbf-4be2-a064-f55ed18bf5d8")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 138.43 36.83 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566212ed")
+		(property "Reference" "#PWR025"
+			(at 138.43 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 136.652 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "410ee560-1d0a-4482-b54d-7e6c5dbdb41a")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:R-RESCUE-tempLoggerNG")
+		(at 147.32 36.83 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005662131e")
+		(property "Reference" "R5"
+			(at 147.32 38.862 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "4k7"
+			(at 147.3454 37.0078 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+			(at 147.32 35.052 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1ce6822d-2507-40b4-95e3-dbd3b0ac08d2")
+		)
+		(pin "2"
+			(uuid "66f2745b-19b3-4e5d-98da-e81567e26a3b")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:USB-MINI-B")
+		(at 252.73 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566255d8")
+		(property "Reference" "CON5"
+			(at 246.38 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "USB-MINI-B"
+			(at 251.46 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "localfootprints:USB_Mini-B"
+			(at 252.73 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 252.73 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "df30ca72-da94-4bc7-814e-270e0450d3db")
+		)
+		(pin "2"
+			(uuid "2491e136-2a89-4a8d-824e-6eb783bd0007")
+		)
+		(pin "3"
+			(uuid "c140f33e-da38-4493-be87-a0f0dc1441e4")
+		)
+		(pin "4"
+			(uuid "9ca908b3-060d-40da-97ed-d2b40b1811fc")
+		)
+		(pin "5"
+			(uuid "1bcfdf21-43a5-4923-82fe-cba3e1337c03")
+		)
+		(pin "6"
+			(uuid "5deb1675-0252-4e58-8a7c-82da8b37865a")
+		)
+		(pin "7"
+			(uuid "9b97bbed-2ca0-4b02-a9fc-8bec551a0af5")
+		)
+		(pin "8"
+			(uuid "d84a6ae1-d5da-4ed3-9eca-a3cf059128c1")
+		)
+		(pin "9"
+			(uuid "a5976242-c72c-45a0-9cc8-752512e01155")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "CON5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:USB-MINI-B")
+		(at 252.73 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005662582e")
+		(property "Reference" "CON6"
+			(at 246.38 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "USB-MINI-B"
+			(at 251.46 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "localfootprints:USB_Mini-B"
+			(at 252.73 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 252.73 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7220f4bb-f90c-4a0a-9a96-cfe39024ee88")
+		)
+		(pin "2"
+			(uuid "09a13f30-baf6-49a4-b7cb-6d33f41555a0")
+		)
+		(pin "3"
+			(uuid "895a6d1c-e6bc-47cf-bb39-eb8fe86cc639")
+		)
+		(pin "4"
+			(uuid "5f8db879-ae0d-4fd6-9110-b09ba385aa55")
+		)
+		(pin "5"
+			(uuid "56f31866-38cf-4869-b9d6-5c0a37ae9969")
+		)
+		(pin "6"
+			(uuid "722a4f05-5966-474c-954c-96c470c506eb")
+		)
+		(pin "7"
+			(uuid "73b22ed4-45a1-4c34-b823-ef3fbd68febd")
+		)
+		(pin "8"
+			(uuid "81ac0c12-b8f9-42cc-8d1b-72c3f1d2dd92")
+		)
+		(pin "9"
+			(uuid "5afe649c-e6da-4c3c-ab8a-348e9f062714")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "CON6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:USB-MINI-B")
+		(at 199.39 91.44 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566258b7")
+		(property "Reference" "CON3"
+			(at 205.74 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "USB-MINI-B"
+			(at 200.66 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "localfootprints:USB_Mini-B"
+			(at 199.39 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 199.39 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ed6be9e8-b993-4801-aef2-2237e065df37")
+		)
+		(pin "2"
+			(uuid "b928f7ec-eddf-4325-a217-6fe0b6914384")
+		)
+		(pin "3"
+			(uuid "f0a716ae-67d2-498c-b4f0-d100329430e3")
+		)
+		(pin "4"
+			(uuid "cec0e7be-f5da-4dd9-ab8c-0c44ffae08e8")
+		)
+		(pin "5"
+			(uuid "84d35224-e14b-4c37-ad20-66a6c215c8cd")
+		)
+		(pin "6"
+			(uuid "148b7e36-c6f1-4f09-ac19-6d1bf0cb711e")
+		)
+		(pin "7"
+			(uuid "9e0b96f5-5906-4701-84df-c65caea15255")
+		)
+		(pin "8"
+			(uuid "2059fee1-e450-4371-80e9-3e9de7af7fa5")
+		)
+		(pin "9"
+			(uuid "e68aab3c-4746-477a-a2ef-80e8aa874242")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "CON3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:USB-MINI-B")
+		(at 199.39 134.62 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056625aa8")
+		(property "Reference" "CON4"
+			(at 205.74 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "USB-MINI-B"
+			(at 200.66 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "localfootprints:USB_Mini-B"
+			(at 199.39 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 199.39 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "43aa0550-66bb-4c04-98dd-612b556a4a99")
+		)
+		(pin "2"
+			(uuid "b8f9e151-3c91-4635-9659-a52a1f0bd3f2")
+		)
+		(pin "3"
+			(uuid "94bceb86-4ba8-4510-a8d8-5cea77528654")
+		)
+		(pin "4"
+			(uuid "7a4bf99c-8e20-4bec-a5f5-28afc522f3ed")
+		)
+		(pin "5"
+			(uuid "c9b2cd09-40bc-4bf2-b84d-6113a3b81091")
+		)
+		(pin "6"
+			(uuid "69650242-b924-4b7c-b399-0f86bf61a5b5")
+		)
+		(pin "7"
+			(uuid "26770a07-5be0-47a0-a3fb-4b1b8867ad33")
+		)
+		(pin "8"
+			(uuid "f597fad6-569f-40d8-8550-ac18f5bbc704")
+		)
+		(pin "9"
+			(uuid "04147c04-29a7-42b1-b935-e207df2e5042")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "CON4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:MOS_N")
+		(at 215.9 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056626067")
+		(property "Reference" "Q1"
+			(at 216.154 104.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MOS_N"
+			(at 216.154 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "localfootprints:SOT-23_GSD_Handsoldering"
+			(at 215.9 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 215.9 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "D"
+			(uuid "ea72481d-d520-4545-8ad6-30e8330d3334")
+		)
+		(pin "G"
+			(uuid "732204da-9937-4d93-b7fc-e005f62ad0b9")
+		)
+		(pin "S"
+			(uuid "350278b6-ac74-4cd8-916f-47bd0b82cee3")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:MOS_N")
+		(at 215.9 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566260ec")
+		(property "Reference" "Q2"
+			(at 216.154 148.082 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MOS_N"
+			(at 216.154 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "localfootprints:SOT-23_GSD_Handsoldering"
+			(at 215.9 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 215.9 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "D"
+			(uuid "8cde26ca-7207-4a3c-99c2-4cc6b0d5c75b")
+		)
+		(pin "G"
+			(uuid "90bb9c1e-4bb4-4a86-bbf3-0cc51acee3f3")
+		)
+		(pin "S"
+			(uuid "fcc0d21b-c334-439f-90d5-6f61ea2921cd")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:MOS_N")
+		(at 236.22 152.4 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005662618b")
+		(property "Reference" "Q4"
+			(at 235.966 148.082 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MOS_N"
+			(at 235.966 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "localfootprints:SOT-23_GSD_Handsoldering"
+			(at 236.22 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "D"
+			(uuid "80541745-1bcc-439c-a3e5-1fb4dcec72e7")
+		)
+		(pin "G"
+			(uuid "adef937d-f0f8-4fda-8b9c-d0cc30dbf540")
+		)
+		(pin "S"
+			(uuid "ae2e4359-ca02-49bd-a78b-c5fb4ab81031")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "localsymbols:MOS_N")
+		(at 236.22 109.22 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005662625a")
+		(property "Reference" "Q3"
+			(at 235.966 104.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MOS_N"
+			(at 235.966 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "localfootprints:SOT-23_GSD_Handsoldering"
+			(at 236.22 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "D"
+			(uuid "cc35ad48-b37f-4bba-ac1b-7e385f7cccec")
+		)
+		(pin "G"
+			(uuid "a478d155-c1cb-422a-bbed-4cd4cb941f5a")
+		)
+		(pin "S"
+			(uuid "a5dd4f97-554d-4ecb-bc25-578bb797a222")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 218.44 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056626314")
+		(property "Reference" "#PWR026"
+			(at 218.44 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 218.44 119.888 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "82c13e2c-aab8-496b-b388-9e8162db4582")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 233.68 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566263c1")
+		(property "Reference" "#PWR027"
+			(at 233.68 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.68 119.888 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 233.68 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "713f9428-25bd-459e-9162-4b5f57d0e53f")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 233.68 161.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005662641d")
+		(property "Reference" "#PWR028"
+			(at 233.68 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.68 163.068 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 233.68 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2ebe3634-41a2-4ad3-8356-2e8db34012a7")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 218.44 161.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005662651b")
+		(property "Reference" "#PWR029"
+			(at 218.44 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 218.44 163.068 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3064ded1-9164-4422-a519-f8807c8f7d3a")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 177.8 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056627eaa")
+		(property "Reference" "#PWR030"
+			(at 177.8 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.8 105.918 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dcbe628b-3b8b-4739-aa40-d24dff088e18")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 271.78 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566281dd")
+		(property "Reference" "#PWR031"
+			(at 271.78 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 271.78 105.918 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 271.78 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 271.78 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3c49968-2dc1-4176-ac48-b7d4a348987b")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 271.78 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000566285b7")
+		(property "Reference" "#PWR032"
+			(at 271.78 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 271.78 149.098 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 271.78 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 271.78 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b8a3c726-4ee0-40ea-91fb-ac68cc60bb2d")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:GND-RESCUE-tempLoggerNG")
+		(at 177.8 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056628a0d")
+		(property "Reference" "#PWR033"
+			(at 177.8 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.8 149.098 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d47690cf-4f45-4ffc-bff7-b95ed86a35c0")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:R-RESCUE-tempLoggerNG")
+		(at 115.57 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056a6b163")
+		(property "Reference" "R6"
+			(at 117.602 121.92 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 115.7478 121.8946 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+			(at 113.792 121.92 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2347a717-12a8-4570-ac83-3d3f19d85018")
+		)
+		(pin "2"
+			(uuid "c08326d4-b648-4919-a1bc-c5889295a29f")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tempLoggerNG-rescue:+3.3V-RESCUE-tempLoggerNG")
+		(at 115.57 114.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000056a6b52d")
+		(property "Reference" "#PWR035"
+			(at 115.57 115.316 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 115.57 111.506 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "077d0452-ad8f-4f25-8a57-3a6e081841fc")
+		)
+		(instances
+			(project "tempLoggerNG"
+				(path "/023308b6-0ff3-4d8f-bb0d-97d6cbb4c751"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

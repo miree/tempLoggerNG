@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "tempLoggerNG-rescue") (type "Legacy") (uri "${KIPRJMOD}/tempLoggerNG-rescue.lib") (options "") (descr ""))
+	(lib (name "localsymbols") (type "Legacy") (uri "${KIPRJMOD}/localsymbols.lib") (options "") (descr ""))
+)
