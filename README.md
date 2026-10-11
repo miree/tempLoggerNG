@@ -7,6 +7,8 @@ controller chip). The device connects directly to a PC over USB and is
 controlled by a small command-line tool that triggers measurements and
 logs resistance/temperature readings to a file.
 
+https://emsyfs.blogspot.com/2017/07/pt-100-temperature-logger.html
+
 ## Features
 
 - 4 independent PT-100 RTD input channels, read via a single ADS1248
