@@ -196,10 +196,15 @@ echoed back correctly, as a basic USB communication sanity check.
 
 ## License
 
-This project is licensed under the GNU General Public License v2 (see
-`LICENSE`). The bundled V-USB driver (`firmware/usbdrv/`) is
-dual-licensed under GPLv2 or a commercial license from Objective
-Development — see `firmware/usbdrv/License.txt` and
+The firmware and command-line tool (`firmware/`, `commandline/`) are
+licensed under the GNU General Public License v2 (see `LICENSE`). The
+bundled V-USB driver (`firmware/usbdrv/`) is dual-licensed under GPLv2
+or a commercial license from Objective Development — see
+`firmware/usbdrv/License.txt` and
 `firmware/usbdrv/CommercialLicense.txt` for details, and
 `firmware/usbdrv/USB-ID-FAQ.txt` / `USB-IDs-for-free.txt` regarding use
 of the shared VID/PID.
+
+The hardware design (`hardware/`) is licensed under the CERN Open
+Hardware Licence Version 2 - Strongly Reciprocal (CERN-OHL-S v2), see
+`LICENSE-HARDWARE`.
